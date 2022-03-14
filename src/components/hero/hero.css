@@ -1,9 +1,10 @@
 .hero {
     display: flex;
-    background-color: red;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 5%;
+    padding-bottom: 5vh;
+    height: 95vh;
 }
 
 .hero__content {
@@ -12,14 +13,14 @@
     flex-direction: column;
     justify-content: center; /* Main Axis */
     align-items: center; /* Cross Axis */
+    width: 50%;
     
 }
 
 .hero__content h1 {
     font-family: var(--font-family);
     font-weight: 800;
-    font-size: 62px;
-    line-height: 75px;
+    font-size: 4rem;
     letter-spacing: -0.04em;
     color: white;
 }
@@ -30,4 +31,18 @@
 
 .hero__content p {
     color: white;
+}
+
+.hero__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.hero__image img {
+    width: 40%;
+    height: 40%;
 }
