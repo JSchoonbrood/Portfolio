@@ -1,6 +1,7 @@
 .navbar {
     top: 0;
     height: 5vh;
+    position: sticky;
 }
 
 .navbar__links_container {
