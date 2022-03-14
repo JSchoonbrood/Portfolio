@@ -1,3 +1,10 @@
 .about {
     height: 100vh;
+    display: flex;
+}
+
+.about__education-block {
+    border: 1px;
+    background-color: white;
+    padding: 1%;
 }

@@ -3,7 +3,7 @@ import './about.css'
 
 const About = () => {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="about__img-container"></div>
       <div className="about__bio"></div>
       <div className="about__sections">
@@ -29,7 +29,24 @@ const About = () => {
           <li>Qt (Python)</li>
         </ul>
       </div>
-      <div className="about__education"></div>
+      <div className="about__education">
+        <div className="about__education-block">
+          <div className="about__education-block_content">
+            <h3>2019-2021</h3>
+            <h4>University Of York</h4>
+            <p>Graduated with First Class Honours in Computer Science (BEng). </p>
+          </div>
+        </div>
+
+        <div className="about__education-block">
+          <div className="about__education-block_content">
+            <h3>2017-2019</h3>
+            <h4>Queensbury Academy - ALevels</h4>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
       <div className="about__hobbies">
         <ul>
           <li>Vehicle Mechanics</li>
