@@ -1,0 +1,18 @@
+.navbar__links_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.navbar__links_container a {
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin: 0 2rem; /* Controls spacing between link elements */
+    text-decoration: none; /* Removes hyperlink underline */
+}
+
+.navbar__links_container a:hover {
+    text-decoration: underline;
+}
