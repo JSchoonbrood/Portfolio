@@ -1,16 +1,18 @@
 .hero {
     display: flex;
-    flex-direction: row;
+    background-color: red;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
 
 .hero__content {
-    flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    height: 100%;
     flex-direction: column;
+    justify-content: center; /* Main Axis */
+    align-items: center; /* Cross Axis */
     
-    margin-right: 5rem;
 }
 
 .hero__content h1 {
@@ -20,6 +22,10 @@
     line-height: 75px;
     letter-spacing: -0.04em;
     color: white;
+}
+
+.hero__content h1>span {
+    color: greenyellow;
 }
 
 .hero__content p {
