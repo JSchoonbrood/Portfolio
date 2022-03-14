@@ -1,8 +1,14 @@
+.navbar {
+    top: 0;
+    height: 5vh;
+}
+
 .navbar__links_container {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     padding-right: 0.4rem;
+    
 }
 
 .navbar__links_container a {
