@@ -9,12 +9,12 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="app">
       <div className="gradient__bg">
         <Navbar />
         <Hero />
+        <About />
       </div>
-      <About />
       <Footer />
     </div>
   );
