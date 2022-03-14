@@ -9,7 +9,7 @@ const Navbar = () => {
           <img></img>
         </div>
         <nav className="navbar__links_container">
-          <a href="#home">Home</a>
+          <a href="#app">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
