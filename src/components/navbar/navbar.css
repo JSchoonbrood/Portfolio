@@ -16,8 +16,8 @@
     color: #fff;
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: 0.9rem;
-    margin: 0 0.5rem; /* Controls spacing between link elements */
+    font-size: 1.2rem;
+    margin: 0 1rem; /* Controls spacing between link elements */
     text-decoration: none; /* Removes hyperlink underline */
 }
 
