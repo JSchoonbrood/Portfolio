@@ -1,10 +1,25 @@
 .about {
     height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
+.about__desc {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0.5rem;
+}
+
+.about__sections button{
+    margin: 0 0.5rem;
+    width: 10rem;
+}
+
 
 .about__education-block {
     border: 1px;
     background-color: white;
-    padding: 1%;
+    margin: 5%;
 }

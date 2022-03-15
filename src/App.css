@@ -2,14 +2,14 @@
   height: 400%;
   width: 100%;
   position: absolute;
-  
+  scroll-behavior: smooth;
 }
 
 * {
   box-sizing: border-box; /* Accounts for any border and padding specified */
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
+
   
 }
 
