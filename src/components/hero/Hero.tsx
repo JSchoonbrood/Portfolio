@@ -12,7 +12,7 @@ const Hero = () => {
       </div>
 
       <div className="hero__image">
-          <img src={hero_img} />
+          <img src={hero_img} alt="Clipart Developer"/>
         </div>
     </div>
   )
