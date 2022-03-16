@@ -12,7 +12,7 @@ class Desc extends React.Component {
                 ],
                 autoStart: true,
                 loop: true,
-                deleteSpeed: 60,
+                deleteSpeed: 45,
             }}
             />
         );
