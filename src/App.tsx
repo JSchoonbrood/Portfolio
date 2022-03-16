@@ -12,8 +12,10 @@ function App() {
     <div className="App" id="app">
       <div className="gradient__bg">
         <Navbar />
-        <Hero />
-        <About />
+        <div className="components">
+          <Hero />
+          <About />
+        </div>
       </div>
       <Footer />
     </div>
