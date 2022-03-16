@@ -12,6 +12,10 @@
     margin: 0 0.5rem;
 }
 
+.about__sections {
+    z-index: 999;
+}
+
 .about__sections button{
     margin: 0 0.5rem;
     width: 10rem;
