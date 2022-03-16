@@ -1,5 +1,5 @@
 import React from 'react'
-import './hero.css'
+import './hero.scss'
 import { default as hero_img } from '../../images/hero_dev.svg'
 import Desc from "./type"
 

@@ -1,0 +1,27 @@
+.App {
+	height: 400%;
+	width: 100%;
+	position: absolute;
+	scroll-behavior: smooth;
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	background: var(--color-bg);
+}
+.gradient__bg {
+	min-width: 100%;
+	min-height: 100%;
+	background: -moz-radial-gradient(circle at 3% 25%, rgba(4, 13, 16, 1) 0%, rgba(2, 41, 80, 1) 21%, rgba(2, 86, 96, 1) 100%);
+	background: -webkit-radial-gradient(circle at 3% 25%, rgba(4, 13, 16, 1) 0%, rgba(2, 41, 80, 1) 21%, rgba(2, 86, 96, 1) 100%);
+	background: -o-radial-gradient(circle at 3% 25%, rgba(4, 13, 16, 1) 0%, rgba(2, 41, 80, 1) 21%, rgba(2, 86, 96, 1) 100%);
+	background: -ms-radial-gradient(circle at 3% 25%, rgba(4, 13, 16, 1) 0%, rgba(2, 41, 80, 1) 21%, rgba(2, 86, 96, 1) 100%);
+	background: radial-gradient(circle at 3% 25%, rgba(4, 13, 16, 1) 0%, rgba(2, 41, 80, 1) 21%, rgba(2, 86, 96, 1) 100%);
+}
+.gradient__text {
+	background: var(--gradient-text);
+	background-clip: text;
+}

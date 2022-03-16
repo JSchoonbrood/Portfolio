@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import { About, Hero, Navbar, Projects } from './components';
 import { Footer } from './containers';
 
-import './App.css';
+import './App.scss';
 
 
 function App() {

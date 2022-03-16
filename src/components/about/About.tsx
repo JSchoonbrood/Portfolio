@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { StringMappingType } from 'typescript'
-import './about.css'
+import './about.scss'
 
 const About = () => {
   const [activeComponent, setActiveComponent] = useState(0)
