@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import { StringMappingType } from 'typescript'
 import './about.scss'
 
 const About = () => {
