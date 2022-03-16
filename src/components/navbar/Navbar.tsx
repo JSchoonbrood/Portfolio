@@ -1,4 +1,6 @@
 import React from 'react'
+import { AiOutlineHome, AiOutlineUser, AiOutlineContacts} from 'react-icons/ai'
+import { MdOutlineMonitor } from 'react-icons/md'
 import './navbar.scss'
 
 const Navbar = () => {
@@ -9,10 +11,10 @@ const Navbar = () => {
           <img></img>
         </div>
         <nav className="navbar__links_container">
-          <a href="#app">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="#app"><AiOutlineHome /> Home</a>
+          <a href="#about"><AiOutlineUser /> About</a>
+          <a href="#projects"><MdOutlineMonitor /> Projects</a>
+          <a href="#contact"><AiOutlineContacts /> Contact</a>
         </nav>
         
       </div>
