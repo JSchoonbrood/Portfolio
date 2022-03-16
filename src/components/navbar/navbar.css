@@ -1,6 +1,6 @@
 .navbar {
     top: 0;
-    height: 5vh;
+    height: auto;
     position: sticky;
 }
 
