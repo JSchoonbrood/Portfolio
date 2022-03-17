@@ -59,8 +59,10 @@ const About = () => {
   return (
     <div className="about" id="about">
       <div className="about__desc">
-      <div className="about__desc-img-container"><p>Hi</p></div>
-      <div className="about__desc-bio"><p>Hello</p></div>
+        <div className="about__desc-img-container"></div>
+        <div className="about__desc-bio">
+          <h1>Driven software engineer looking for new opportunities</h1>
+          </div>
       </div>
 
       <div className="about__sections">
@@ -69,15 +71,17 @@ const About = () => {
         <button onClick={() => handleClick(2)}>Hobbies</button>
       </div>
 
-      {
-      activeComponent === 0 ? (
-          <Skills />
-      ) : activeComponent === 1 ? (
-          <Education />
-      ) : activeComponent === 2 ? (
-          <Hobbies />
-      ) : null
-      }
+      <div className="about__opt-info">
+        {
+        activeComponent === 0 ? (
+            <Skills />
+        ) : activeComponent === 1 ? (
+            <Education />
+        ) : activeComponent === 2 ? (
+            <Hobbies />
+        ) : null
+        }
+      </div>
 
     </div>
       
