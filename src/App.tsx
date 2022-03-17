@@ -15,7 +15,7 @@ function App() {
           <Navbar />
           <div className="main-screen">
             <div className="sidebar">
-            <Left />
+              <Left />
             </div>
             <div className="components">
               <Hero />
