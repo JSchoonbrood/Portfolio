@@ -49,3 +49,33 @@
 	font-size: 1.5rem;
 	color: greenyellow;
 }
+
+.waving-hand:hover {
+	animation-name: waving;
+	animation-duration: 1.5s;
+	display: inline-block;
+	transform-origin: 65% 65%;
+}
+@keyframes waving {
+	0% {
+		transform: rotate(0deg);
+	}
+	15% {
+		transform: rotate(16deg);
+	}
+	30% {
+		transform: rotate(-10deg);
+	}
+	45% {
+		transform: rotate(16deg);
+	}
+	60% {
+		transform: rotate(-6deg);
+	}
+	75% {
+		transform: rotate(12deg);
+	}
+	90% {
+		transform: rotate(0deg);
+	}
+}
