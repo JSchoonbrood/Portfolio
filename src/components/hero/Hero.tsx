@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className="hero" id="hero">
       <div className="hero__content">
-        <h1 className="gradient__text">Hi! <span className="waving-hand">👋🏻</span><br/>I'm <span>Jake!</span></h1>
+        <h1>Hi! <span className="waving-hand">👋🏻</span><br/>I'm <span>Jake!</span></h1>
         <Desc />
       </div>
 
