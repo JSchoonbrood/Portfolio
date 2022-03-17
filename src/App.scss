@@ -1,5 +1,5 @@
 .App {
-	height: 400%;
+	height: 200%;
 	width: 100%;
 	position: absolute;
 	scroll-behavior: smooth;
@@ -10,9 +10,6 @@
 .main-screen {
 	display: flex;
 	justify-content: center;
-	.sidebar {
-		justify-content: flex-start;
-	}
 	.components {
 		display: flex;
 		flex-direction: column;
