@@ -2,9 +2,6 @@
 	top: 0;
 	height: auto;
 	position: sticky;
-	max-width: 1600px;
-	margin: auto;
-
 }
 
 .navbar__links {
@@ -26,14 +23,24 @@
 	flex-grow: 1;
 	a {
 		color: #fff;
-		font-family: var(--font-family);
 		font-weight: 500;
-		font-size: 1.2rem;
-		margin: 0 1rem;
+		font-size: 1rem;
+		margin: 0 1.1rem;
 		text-decoration: none;
 		z-index: 1;
 		&:hover {
 			border-radius: 16px;
 		}
 	}
+	button {
+		background-color: transparent;
+		border: 1px solid greenyellow;
+		color: greenyellow;
+		font-size: 1rem;
+		font-weight: 500;
+		padding: 0.5rem 0.75rem;
+		border-radius: 0.4rem;
+		margin: 0 1.1rem;
+	}
 }
+
