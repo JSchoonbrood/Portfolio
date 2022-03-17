@@ -1,0 +1,28 @@
+.sidebar {
+    position: sticky;
+    top: 0;
+    .sidebar__elements {
+        display: flex;
+        flex-direction: column;
+        ul {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            list-style: none;
+            color: white;
+            li {
+                font-size: 1.8rem;
+                padding-top: 1.5rem;
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+    .sidebar-vl {
+        border-left: 3px solid white;
+        height: 10vh;
+        margin: auto;
+    }
+}
