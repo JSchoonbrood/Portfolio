@@ -9,9 +9,9 @@ const left = () => {
     <div className="sidebar">
         <div className="sidebar__elements">
             <ul>
-                <li><a href="#"><VscGithubAlt /></a></li>
-                <li><a href="#"><FiLinkedin /></a></li>
-                <li><a href="#"><AiOutlineMail /></a></li>
+                <li><a href="https://github.com/JSchoonbrood" target="_blank"><VscGithubAlt /></a></li>
+                <li><a href="https://www.linkedin.com/in/JSchoonbrood/" target="_blank"><FiLinkedin /></a></li>
+                <li><a href="mailto:schoonbrood.jake@gmail.com?subject=Hello!" target="_blank"><AiOutlineMail /></a></li>
             </ul>
             <div className="sidebar-vl"></div>
 
