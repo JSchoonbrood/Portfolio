@@ -1,6 +1,9 @@
 .sidebar {
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 10;
+    left: 0;
+    padding: 0.3rem;
+    margin: 0 1.1rem;
     .sidebar__elements {
         display: flex;
         flex-direction: column;
