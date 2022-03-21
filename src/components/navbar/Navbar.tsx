@@ -9,10 +9,10 @@ const Navbar = () => {
       <div className="navbar__links">
         <a href="#app"><h1>JS</h1></a>
         <nav className="navbar__links_container">
-          <a href="#app"><AiOutlineHome /> Home</a>
-          <a href="#about"><AiOutlineUser /> About</a>
-          <a href="#projects"><MdOutlineMonitor /> Projects</a>
-          <a href="#contact"><AiOutlineContacts /> Contact</a>
+          <a href="#app"><AiOutlineHome className="icon"/>Home</a>
+          <a href="#about"><AiOutlineUser className="icon"/>About</a>
+          <a href="#projects"><MdOutlineMonitor className="icon"/>Projects</a>
+          <a href="#contact"><AiOutlineContacts className="icon"/>Contact</a>
           <button>Resume</button>
         </nav>
       </div>
