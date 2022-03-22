@@ -10,19 +10,44 @@
 	flex-direction: row;
 	margin: 0 0.5rem;
 }
+
+.about__container {
+	display: flex;
+	flex-direction: row;
+	padding: 1rem;
+}
+
 .about__sections {
 	z-index: 999;
+	display: flex;
+	flex-direction: column;
+	
 	button {
 		margin: 0 0.5rem;
 		width: 10rem;
+		padding: 0.7rem;
+		margin-bottom: 0.9rem;
+		background-color: transparent;
+		border: 0px;
+		font-size: 1.2rem;
+		color: white;
+		border-left: 0.15rem solid;
 	}
+
+	button.active {
+		border-left: 0.15rem solid greenyellow;
+	}
+
 }
+
 .about__education-block {
 	border: 1px;
 	background-color: white;
-	margin: 5%;
+	
 }
 
 .about__opt-info {
+	width: 30vw;
 	height: 60vh;
+	padding-left: 1rem;
 }
