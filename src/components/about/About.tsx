@@ -2,9 +2,11 @@ import React, {useState} from 'react'
 import './about.scss'
 
 const About = () => {
-  const [activeComponent, setActiveComponent] = useState(0)
+  const [activeComponent, setActiveComponent] = useState(0) // State 0 = Skills
 
-  const handleClick = (component: number) => setActiveComponent(activeComponent => component);
+  const handleClick = (component: number) => {
+    setActiveComponent(activeComponent => component);
+  }
   
   const Skills = () => (
       <div className="about__skills">
@@ -65,28 +67,28 @@ const About = () => {
           </div>
       </div>
 
-      <div className="about__sections">
-        <button onClick={() => handleClick(0)}>Skills</button>
-        <button onClick={() => handleClick(1)}>Education</button>
-        <button onClick={() => handleClick(2)}>Hobbies</button>
-      </div>
+      <div className="about__container">
+        <div className="select-indicator"></div>
+        <div className="about__sections">
+          <button onClick={() => handleClick(0)}>Skills</button>
+          <button onClick={() => handleClick(1)}>Education</button>
+          <button onClick={() => handleClick(2)}>Hobbies</button>
+        </div>
 
-      <div className="about__opt-info">
-        {
-        activeComponent === 0 ? (
-            <Skills />
-        ) : activeComponent === 1 ? (
-            <Education />
-        ) : activeComponent === 2 ? (
-            <Hobbies />
-        ) : null
-        }
+        <div className="about__opt-info">
+          {
+          activeComponent === 0 ? (
+              <Skills />
+          ) : activeComponent === 1 ? (
+              <Education />
+          ) : activeComponent === 2 ? (
+              <Hobbies />
+          ) : null
+          }
+        </div>
       </div>
 
     </div>
-      
-
-      
   )
 }
 
