@@ -9,12 +9,11 @@ const left = () => {
     <div className="sidebar">
         <div className="sidebar__elements">
             <ul>
-                <li><a href="https://github.com/JSchoonbrood" target="_blank"><VscGithubAlt /></a></li>
-                <li><a href="https://www.linkedin.com/in/JSchoonbrood/" target="_blank"><FiLinkedin /></a></li>
-                <li><a href="mailto:schoonbrood.jake@gmail.com?subject=Hello!" target="_blank"><AiOutlineMail /></a></li>
+                <li><a href="https://github.com/JSchoonbrood" target="_blank" rel="noreferrer"><VscGithubAlt className="icon"/></a></li>
+                <li><a href="https://www.linkedin.com/in/JSchoonbrood/" target="_blank" rel="noreferrer"><FiLinkedin /></a></li>
+                <li><a href="mailto:schoonbrood.jake@gmail.com?subject=Hello!" target="_blank" rel="noreferrer"><AiOutlineMail /></a></li>
             </ul>
             <div className="sidebar-vl"></div>
-
         </div>
     </div>
   )
