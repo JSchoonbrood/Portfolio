@@ -2,10 +2,12 @@ import React, {useState} from 'react'
 import './about.scss'
 
 const About = () => {
-  const [activeComponent, setActiveComponent] = useState(0) // State 0 = Skills
+  const [activeComponent, setActiveComponent] = useState(0); // State 0 = Skills
+  const [isActive, setActive] = useState(0);
 
   const handleClick = (component: number) => {
     setActiveComponent(activeComponent => component);
+    setActive(isActive => component);
   }
   
   const Skills = () => (
@@ -70,9 +72,9 @@ const About = () => {
       <div className="about__container">
         <div className="select-indicator"></div>
         <div className="about__sections">
-          <button onClick={() => handleClick(0)}>Skills</button>
-          <button onClick={() => handleClick(1)}>Education</button>
-          <button onClick={() => handleClick(2)}>Hobbies</button>
+          <button onClick={() => handleClick(0)} className={isActive == 0 ? "active" : ""}>Skills</button>
+          <button onClick={() => handleClick(1)} className={isActive == 1 ? "active" : ""}>Education</button>
+          <button onClick={() => handleClick(2)} className={isActive == 2 ? "active" : ""}>Hobbies</button>
         </div>
 
         <div className="about__opt-info">
