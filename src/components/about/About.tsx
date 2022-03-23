@@ -72,9 +72,9 @@ const About = () => {
       <div className="about__container">
         <div className="select-indicator"></div>
         <div className="about__sections">
-          <button onClick={() => handleClick(0)} className={isActive == 0 ? "active" : ""}>Skills</button>
-          <button onClick={() => handleClick(1)} className={isActive == 1 ? "active" : ""}>Education</button>
-          <button onClick={() => handleClick(2)} className={isActive == 2 ? "active" : ""}>Hobbies</button>
+          <button onClick={() => handleClick(0)} className={isActive === 0 ? "active" : ""}>Skills</button>
+          <button onClick={() => handleClick(1)} className={isActive === 1 ? "active" : ""}>Education</button>
+          <button onClick={() => handleClick(2)} className={isActive === 2 ? "active" : ""}>Hobbies</button>
         </div>
 
         <div className="about__opt-info">
