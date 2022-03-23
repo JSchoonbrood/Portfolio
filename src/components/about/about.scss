@@ -34,8 +34,13 @@
 		border-left: 0.15rem solid;
 	}
 
+	button:hover {
+		background-color: rgb(3, 36, 56, 0.3);
+	}
+
 	.active {
 		border-left: 0.15rem solid greenyellow;
+		color: greenyellow;
 	}
 
 }

@@ -19,12 +19,12 @@
 				padding-bottom: 1.5rem;
 				a {
 					color: white;
-					transition-property: margin-top;
+					transition-property: padding-bottom;
 					transition-duration: 1s;
 				}
 				.icon:hover {
 					color: greenyellow;
-					margin-top: 3rem;
+					padding-bottom: 1rem;
 				}
 			}
 		}

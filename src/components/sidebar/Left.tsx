@@ -24,7 +24,7 @@ const left = () => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<FiLinkedin />
+							<FiLinkedin className="icon" />
 						</a>
 					</li>
 					<li>
@@ -33,7 +33,7 @@ const left = () => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiOutlineMail />
+							<AiOutlineMail className="icon" />
 						</a>
 					</li>
 				</ul>
