@@ -17,12 +17,12 @@ const Navbar = () => {
 	return (
 		<div className="navbar">
 			<div className="navbar__links">
-				<a href="#app">
+				<a href="/">
 					<h1>JS</h1>
 				</a>
 				<nav className="navbar__links_container">
 					<a
-						href="#app"
+						href="/"
 						onClick={() => handleClick(0)}
 						className={isActive === 0 ? "active" : ""}
 					>
@@ -30,7 +30,7 @@ const Navbar = () => {
 						Home
 					</a>
 					<a
-						href="#about"
+						href="/about"
 						onClick={() => handleClick(1)}
 						className={isActive === 1 ? "active" : ""}
 					>
@@ -38,7 +38,7 @@ const Navbar = () => {
 						About
 					</a>
 					<a
-						href="#projects"
+						href="/projects"
 						onClick={() => handleClick(2)}
 						className={isActive === 2 ? "active" : ""}
 					>
