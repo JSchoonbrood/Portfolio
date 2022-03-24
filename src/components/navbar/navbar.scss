@@ -26,8 +26,8 @@
 	flex-grow: 1;
 	a {
 		color: variables.$text-color-default;
-		font-weight: 500;
-		font-size: 1.2rem;
+		font-weight: variables.$navigation-font-weight;
+		font-size: variables.$navigation-font-size;
 		margin: 0 1.1rem;
 		text-decoration: none;
 		z-index: 1;
@@ -46,8 +46,8 @@
 		background-color: transparent;
 		border: 1px solid variables.$text-color-active;
 		color: variables.$text-color-active;
-		font-size: 1.2rem;
-		font-weight: 500;
+		font-size: variables.$navigation-font-size;
+		font-weight: variables.$navigation-font-weight;
 		padding: 0.5rem 0.75rem;
 		border-radius: 0.4rem;
 		margin: 0 1.1rem;

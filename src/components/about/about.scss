@@ -30,7 +30,7 @@
 				margin-bottom: 0rem;
 				background-color: transparent;
 				border: 0px;
-				font-size: 1.2rem;
+				font-size: variables.$text-font-size;
 				color: variables.$text-color-default;
 				border-bottom: 0.15rem solid;
 			}
@@ -60,7 +60,7 @@
 	.about__skills {
 		p {
 			color: variables.$text-color-default;
-			font-size: 2rem;
+			font-size: variables.$subtitle-font-size;
 			display: flex;
 			justify-content: center;
 		}
