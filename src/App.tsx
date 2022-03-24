@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-
+import { Routes, Route, Link } from "react-router-dom";
 import { About, Hero, Navbar, Projects, Left } from './components';
 import { Footer } from './containers';
 
@@ -18,8 +18,11 @@ function App() {
               <Left />
             </div>
             <div className="components">
-              <Hero />
-              <About />
+            <Routes>
+              <Route path="/" element={<Hero />} />
+              <Route path="about" element={<About />} />
+              <Route path="projects" element={<Projects />} />
+            </Routes>
             </div>
           </div>
         </div>
