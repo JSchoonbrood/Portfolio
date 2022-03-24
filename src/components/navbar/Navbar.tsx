@@ -5,15 +5,10 @@ import {
 	AiOutlineContacts,
 } from "react-icons/ai";
 import { MdOutlineMonitor } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 
 const Navbar = () => {
-	const [isActive, setActive] = useState(0);
-
-	const handleClick = (component: number) => {
-		setActive((isActive) => component);
-	};
-
 	return (
 		<div className="navbar">
 			<div className="navbar__links">
@@ -21,38 +16,42 @@ const Navbar = () => {
 					<h1>JS</h1>
 				</a>
 				<nav className="navbar__links_container">
-					<a
-						href="/"
-						onClick={() => handleClick(0)}
-						className={isActive === 0 ? "active" : ""}
+					<NavLink
+						to="/"
+						className={({ isActive }) =>
+						isActive ? "active" : undefined
+						}
 					>
 						<AiOutlineHome className="icon" />
 						Home
-					</a>
-					<a
-						href="/about"
-						onClick={() => handleClick(1)}
-						className={isActive === 1 ? "active" : ""}
+					</NavLink>
+					<NavLink
+						to="/about"
+						className={({ isActive }) =>
+						isActive ? "active" : undefined
+						}
 					>
 						<AiOutlineUser className="icon" />
 						About
-					</a>
-					<a
-						href="/projects"
-						onClick={() => handleClick(2)}
-						className={isActive === 2 ? "active" : ""}
+					</NavLink>
+					<NavLink
+						to="/projects"
+						className={({ isActive }) =>
+						isActive ? "active" : undefined
+						}
 					>
 						<MdOutlineMonitor className="icon" />
 						Projects
-					</a>
-					<a
-						href="#contact"
-						onClick={() => handleClick(3)}
-						className={isActive === 3 ? "active" : ""}
+					</NavLink>
+					<NavLink
+						to="/contact"
+						className={({ isActive }) =>
+						isActive ? "active" : undefined
+						}
 					>
 						<AiOutlineContacts className="icon" />
 						Contact
-					</a>
+					</NavLink>
 					<button>Resume</button>
 				</nav>
 			</div>
