@@ -1,6 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { About, Hero, Navbar, Projects, Left } from "./components";
 import { Footer } from "./containers";
 
