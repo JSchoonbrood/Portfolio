@@ -11,42 +11,37 @@ const Navbar = () => {
 	return (
 		<div className="navbar">
 			<div className="navbar__links">
-				<a href="/">
+				<button
+					onClick={() => window.location.reload()}
+					className="reload-button"
+				>
 					<h1>JS</h1>
-				</a>
+				</button>
 				<nav className="navbar__links_container">
 					<NavLink
 						to="/"
-						className={({ isActive }) =>
-						isActive ? "active" : undefined
-						}
+						className={({ isActive }) => (isActive ? "active" : undefined)}
 					>
 						<AiOutlineHome className="icon" />
 						Home
 					</NavLink>
 					<NavLink
 						to="/about"
-						className={({ isActive }) =>
-						isActive ? "active" : undefined
-						}
+						className={({ isActive }) => (isActive ? "active" : undefined)}
 					>
 						<AiOutlineUser className="icon" />
 						About
 					</NavLink>
 					<NavLink
 						to="/projects"
-						className={({ isActive }) =>
-						isActive ? "active" : undefined
-						}
+						className={({ isActive }) => (isActive ? "active" : undefined)}
 					>
 						<MdOutlineMonitor className="icon" />
 						Projects
 					</NavLink>
 					<NavLink
 						to="/contact"
-						className={({ isActive }) =>
-						isActive ? "active" : undefined
-						}
+						className={({ isActive }) => (isActive ? "active" : undefined)}
 					>
 						<AiOutlineContacts className="icon" />
 						Contact
