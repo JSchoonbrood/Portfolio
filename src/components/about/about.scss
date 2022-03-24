@@ -1,79 +1,94 @@
+@use './../../variables';
+
 .about {
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-}
-.about__desc {
-	display: flex;
-	flex-direction: row;
-	margin: 0 0.5rem;
-}
-
-.about__container {
-	display: flex;
-	flex-direction: row;
-	padding: 1rem;
-}
-
-.about__sections {
-	z-index: 999;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	
-	button {
+	.about__desc {
+		display: flex;
+		flex-direction: row;
 		margin: 0 0.5rem;
-		width: 10rem;
-		padding: 0.7rem;
-		margin-bottom: 0rem;
-		background-color: transparent;
-		border: 0px;
-		font-size: 1.2rem;
-		color: white;
-		border-left: 0.15rem solid;
+		color: variables.$text-color-default;
 	}
+	.about__container {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
 
-	button:hover {
-		background-color: rgb(3, 36, 56, 0.3);
+		.about__sections {
+			z-index: 999;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			
+			button {
+				margin: 0 0.5rem;
+				width: 10rem;
+				padding: 0.7rem;
+				margin-bottom: 0rem;
+				background-color: transparent;
+				border: 0px;
+				font-size: 1.2rem;
+				color: variables.$text-color-default;
+				border-bottom: 0.15rem solid;
+			}
+		
+			button:hover {
+				background-color: variables.$button-highlight;
+			}
+		
+			.active {
+				border-bottom: 0.15rem solid variables.$text-color-active;
+				color: variables.$text-color-active;
+			}
+		
+		}
 	}
-
-	.active {
-		border-left: 0.15rem solid greenyellow;
-		color: greenyellow;
-	}
-
-}
-
-.about__education-block {
-	border: 1px;
-	background-color: white;
-	
 }
 
 .about__opt-info {
-	width: 30vw;
+	width: 80vw;
 	height: 60vh;
 	padding-left: 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+
+	.about__skills {
+		p {
+			color: variables.$text-color-default;
+			font-size: 2rem;
+			display: flex;
+			justify-content: center;
+		}
+		ul {
+			list-style: none;
+		}
+		.icons {
+			width: 5rem;
+			height: 5rem;
+			margin: 0.6rem;
+		}
+		.horizontal-list {
+			display: flex;
+		}
+	}
 }
 
-.about__skills {
-	ul {
-		list-style: none;
-	}
-	.icons {
-		width: 5rem;
-		height: 5rem;
-		margin: 0.6rem;
-	}
-	.horizontal-list {
-		display: flex;
-	}
+.about__education {
+	color: variables.$text-color-default;
 }
+
+.about__hobbies {
+	color: variables.$text-color-default;
+}
+
+
+
+
 
 
 

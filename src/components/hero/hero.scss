@@ -1,3 +1,5 @@
+@use './../../variables';
+
 .hero {
 	display: flex;
 	flex-direction: row;
@@ -18,13 +20,13 @@
 		font-weight: 800;
 		font-size: 4rem;
 		letter-spacing: -0.04em;
-		color: white;
+		color: variables.$text-color-default;
 		span {
-			color: greenyellow;
+			color: variables.$text-color-active;
 		}
 	}
 	p {
-		color: white;
+		color: variables.$text-color-default;
 	}
 }
 .hero__image {
@@ -42,12 +44,12 @@
 
 .Typewriter__wrapper {
 	font-size: 1.5rem;
-	color: greenyellow;
+	color: variables.$text-color-active;
 }
 
 .Typewriter__cursor {
 	font-size: 1.5rem;
-	color: greenyellow;
+	color: variables.$text-color-active;
 }
 
 .waving-hand:hover {

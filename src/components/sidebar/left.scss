@@ -1,3 +1,5 @@
+@use './../../variables';
+
 .sidebar {
 	position: fixed;
 	top: 10;
@@ -13,24 +15,24 @@
 			flex-direction: column;
 			justify-content: flex-end;
 			list-style: none;
-			color: white;
+			color: variables.$text-color-default;
 			li {
 				font-size: 1.8rem;
 				padding-bottom: 1.5rem;
 				a {
-					color: white;
+					color: variables.$text-color-default;
 					transition-property: padding-bottom;
 					transition-duration: 1s;
 				}
 				.icon:hover {
-					color: greenyellow;
+					color: variables.$text-color-active;
 					padding-bottom: 1rem;
 				}
 			}
 		}
 	}
 	.sidebar-vl {
-		border-left: 3px solid white;
+		border-left: 3px solid variables.$text-color-default;
 		height: 10vh;
 		margin: auto;
 	}
