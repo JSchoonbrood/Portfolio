@@ -12,8 +12,8 @@ const Projects = () => {
 						amount of performance from a vehicle through the sale of aftermarket
 						parts and services such as engine management tuning.
 					</p>
-					<a href="#">Code</a>
-					<a href="#">Live View</a>
+					{/* <a href="#">Code</a> */}
+					{/* <a href="#">Live View</a> */}
 					<ul>
 						<li>HTML5</li>
 						<li>SASS</li>
@@ -32,8 +32,8 @@ const Projects = () => {
 						during engine builds and allows the user to be transparent with
 						their customer base.
 					</p>
-					<a href="#">Code</a>
-					<a href="#">Download</a>
+					{/* <a href="#">Code</a> */}
+					{/* <a href="#">Download</a> */}
 					<ul>
 						<li>Python</li>
 						<li>SQLite3</li>
@@ -55,8 +55,8 @@ const Projects = () => {
 						5minute car journey without any significant sacrifice of route
 						quality (majority of the time, route quality was equal or improved).
 					</p>
-					<a href="#">Code</a>
-					<a href="#">Report</a>
+					{/* <a href="#">Code</a> */}
+					{/* <a href="#">Report</a> */}
 					<ul>
 						<li>Python</li>
 						<li>Tensorflow</li>
