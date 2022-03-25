@@ -9,7 +9,7 @@ import "./navbar.scss";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar navbar-scrolled">
       <div className="navbar__links">
         <button
           onClick={() => window.location.reload()}
@@ -46,7 +46,7 @@ const Navbar = () => {
             <AiOutlineContacts className="icon" />
             Contact
           </NavLink>
-          <button>Resume</button>
+          <button className="resume-button">Resume</button>
         </nav>
       </div>
     </div>
