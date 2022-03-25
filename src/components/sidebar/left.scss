@@ -1,39 +1,39 @@
-@use './../../variables';
+@use "./../../variables";
 
 .sidebar {
-	position: fixed;
-	top: 10;
-	left: 0;
-	padding: 0.3rem;
-	margin: 0 1.1rem;
-	.sidebar__elements {
-		display: flex;
-		flex-direction: column;
-		ul {
-			height: 85vh;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-end;
-			list-style: none;
-			color: variables.$text-color-default;
-			li {
-				font-size: variables.$navigation-font-size-2;
-				padding-bottom: 1.5rem;
-				a {
-					color: variables.$text-color-default;
-					transition-property: padding-bottom;
-					transition-duration: 1s;
-				}
-				.icon:hover {
-					color: variables.$text-color-active;
-					padding-bottom: 1rem;
-				}
-			}
-		}
-	}
-	.sidebar-vl {
-		border-left: 3px solid variables.$text-color-default;
-		height: 10vh;
-		margin: auto;
-	}
+  position: fixed;
+  top: 10;
+  left: 0;
+  padding: 0.3rem;
+  margin: 0 1.1rem;
+  .sidebar__elements {
+    display: flex;
+    flex-direction: column;
+    ul {
+      height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      list-style: none;
+      color: variables.$text-color-default;
+      li {
+        font-size: variables.$navigation-font-size-2;
+        padding-bottom: 1.5rem;
+        a {
+          color: variables.$text-color-default;
+          transition-property: padding-bottom;
+          transition-duration: 1s;
+        }
+        .icon:hover {
+          color: variables.$text-color-active;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+  .sidebar-vl {
+    border-left: 3px solid variables.$text-color-default;
+    height: 10vh;
+    margin: auto;
+  }
 }

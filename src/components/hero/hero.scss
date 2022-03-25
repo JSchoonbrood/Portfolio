@@ -1,82 +1,82 @@
-@use './../../variables';
+@use "./../../variables";
 
 .hero {
-	display: flex;
-	flex-direction: row;
-	padding: 3%;
-	width: 100%;
-	height: 95vh;
+  display: flex;
+  flex-direction: row;
+  padding: 3%;
+  width: 100%;
+  height: 95vh;
 }
 .hero__content {
-	display: flex;
-	height: 100%;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	width: 50%;
-	padding-left: 10%;
-	h1 {
-		font-family: var(--font-family);
-		font-weight: variables.$title-font-weight;
-		font-size: variables.$title-font-size;
-		color: variables.$text-color-default;
-		letter-spacing: -0.04em;
-		span {
-			color: variables.$text-color-active;
-		}
-	}
-	p {
-		color: variables.$text-color-default;
-	}
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  padding-left: 10%;
+  h1 {
+    font-family: var(--font-family);
+    font-weight: variables.$title-font-weight;
+    font-size: variables.$title-font-size;
+    color: variables.$text-color-default;
+    letter-spacing: -0.04em;
+    span {
+      color: variables.$text-color-active;
+    }
+  }
+  p {
+    color: variables.$text-color-default;
+  }
 }
 .hero__image {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	width: 50%;
-	img {
-		width: 40%;
-		height: 40%;
-	}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  img {
+    width: 40%;
+    height: 40%;
+  }
 }
 
 .Typewriter__wrapper {
-	font-size: variables.$subtitle-font-size;
-	color: variables.$text-color-active;
+  font-size: variables.$subtitle-font-size;
+  color: variables.$text-color-active;
 }
 
 .Typewriter__cursor {
-	font-size: variables.$subtitle-font-size;
-	color: variables.$text-color-active;
+  font-size: variables.$subtitle-font-size;
+  color: variables.$text-color-active;
 }
 
 .waving-hand:hover {
-	animation-name: waving;
-	animation-duration: 1.5s;
-	display: inline-block;
-	transform-origin: 65% 65%;
+  animation-name: waving;
+  animation-duration: 1.5s;
+  display: inline-block;
+  transform-origin: 65% 65%;
 }
 @keyframes waving {
-	0% {
-		transform: rotate(0deg);
-	}
-	15% {
-		transform: rotate(16deg);
-	}
-	30% {
-		transform: rotate(-10deg);
-	}
-	45% {
-		transform: rotate(16deg);
-	}
-	60% {
-		transform: rotate(-6deg);
-	}
-	75% {
-		transform: rotate(12deg);
-	}
-	90% {
-		transform: rotate(0deg);
-	}
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(16deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  45% {
+    transform: rotate(16deg);
+  }
+  60% {
+    transform: rotate(-6deg);
+  }
+  75% {
+    transform: rotate(12deg);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
 }
