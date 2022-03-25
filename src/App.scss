@@ -1,3 +1,5 @@
+@use "./variables";
+
 .App {
   height: 200%;
   width: 100%;
@@ -19,10 +21,6 @@
   }
 }
 
-.margin-left {
-  margin-left: 1rem;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -30,34 +28,19 @@
 }
 
 .gradient__bg {
-  background: -moz-radial-gradient(
-    circle at 3% 25%,
-    rgba(4, 13, 16, 1) 0%,
-    rgba(2, 41, 80, 1) 21%,
-    rgba(2, 86, 96, 1) 100%
-  );
-  background: -webkit-radial-gradient(
-    circle at 3% 25%,
-    rgba(4, 13, 16, 1) 0%,
-    rgba(2, 41, 80, 1) 21%,
-    rgba(2, 86, 96, 1) 100%
-  );
-  background: -o-radial-gradient(
-    circle at 3% 25%,
-    rgba(4, 13, 16, 1) 0%,
-    rgba(2, 41, 80, 1) 21%,
-    rgba(2, 86, 96, 1) 100%
-  );
-  background: -ms-radial-gradient(
-    circle at 3% 25%,
-    rgba(4, 13, 16, 1) 0%,
-    rgba(2, 41, 80, 1) 21%,
-    rgba(2, 86, 96, 1) 100%
-  );
-  background: radial-gradient(
-    circle at 3% 25%,
-    rgba(4, 13, 16, 1) 0%,
-    rgba(2, 41, 80, 1) 21%,
-    rgba(2, 86, 96, 1) 100%
-  );
+    /* ff 3.6+ */
+    background:-moz-radial-gradient(circle at 3% 3%, rgba(15, 50, 100, 1) 0%, rgba(10, 25, 47, 1) 100%, rgba(0, 188, 212, 1) 100%, rgba(238, 130, 238, 1) 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 3% 3%, rgba(15, 50, 100, 1) 0%, rgba(10, 25, 47, 1) 100%, rgba(0, 188, 212, 1) 100%, rgba(238, 130, 238, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 3% 3%, rgba(15, 50, 100, 1) 0%, rgba(10, 25, 47, 1) 100%, rgba(0, 188, 212, 1) 100%, rgba(238, 130, 238, 1) 100%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 3% 3%, rgba(15, 50, 100, 1) 0%, rgba(10, 25, 47, 1) 100%, rgba(0, 188, 212, 1) 100%, rgba(238, 130, 238, 1) 100%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 3% 3%, rgba(15, 50, 100, 1) 0%, rgba(10, 25, 47, 1) 100%, rgba(0, 188, 212, 1) 100%, rgba(238, 130, 238, 1) 100%);
+
 }
