@@ -21,12 +21,9 @@
         padding-bottom: 1.5rem;
         a {
           color: variables.$text-color-default;
-          transition-property: padding-bottom;
-          transition-duration: 1s;
         }
         .icon:hover {
           color: variables.$text-color-active;
-          padding-bottom: 1rem;
         }
       }
     }
