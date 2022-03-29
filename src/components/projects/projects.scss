@@ -23,6 +23,7 @@
         display: flex;
         width: 100%;
         color: variables.$text-color-active;
+        font-size: variables.$subtitle-font-size;
       }
       .image {
         width: 100%;
@@ -38,7 +39,15 @@
         list-style: none;
         color: variables.$text-color-default;
         li {
-          margin-left: 1.4rem;
+          display: flex;
+          justify-content: space-evenly;
+        }
+        a {
+          text-decoration: none;
+          color: variables.$text-color-default-shadow;
+        }
+        a:hover {
+          color: variables.$text-color-default;
         }
       }
       .links {
@@ -51,7 +60,7 @@
         }
       }
     }
-    .project-even {
+    .project-left {
       @include project();
       .title {
         grid-area: 1 / 7 / 2 / 11;
@@ -74,7 +83,7 @@
       }
     }
 
-    .project-odd {
+    .project-right {
       @include project();
       .title {
         grid-area: 1 / 1 / 2 / 5;
@@ -97,4 +106,57 @@
       }
     }
   }
+}
+
+
+.other-projects {
+  margin-top: 4rem;
+  .other-projects-title {
+    display: flex;
+    font-size: variables.$subtitle-font-size;
+    color: variables.$text-color-default;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 20%);
+    grid-auto-flow: row;
+    list-style: none;
+    .other-projects-items {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      margin: 1rem;
+      height: 15rem;
+      padding: 0.5rem;
+      border-radius: 10px;
+      background-color: variables.$accent-color;
+      color: variables.$text-color-default-shadow;
+      h1 {
+        display: inline-flex;
+        justify-content: center;
+        color: variables.$text-color-default;
+        font-size: variables.$subtitle-font-size;
+      }
+      p {
+        padding: 1rem;
+      }
+      li {
+        display: inline;
+        list-style: none;
+      }
+      .icons {
+        display: inline-flex;
+        justify-content: space-evenly;
+      }
+    }
+    .other-projects-items:hover {
+      h1 {
+        color: variables.$text-color-active;
+      }
+    }
+  }
+  
 }

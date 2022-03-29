@@ -2,9 +2,10 @@
 
 .navbar {
   top: 0;
-  height: 5.8vh;
+  height: auto;
   position: sticky;
   padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
   background-color: transparent;
   .navbar__links {
     display: flex;
