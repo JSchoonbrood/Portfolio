@@ -17,15 +17,13 @@ const Projects = () => {
 								<li>
 									<div className={index % 2 ? "project-left" : "project-right"}>
 										<h1 className="title">{title}</h1>
-										<img src={image} className="image" alt="placeholder"></img>
+										{image}
 										<p className="description">{description}</p>
 										<div className="links">
 											<a href={code}>
 												<VscGithubAlt />
 											</a>
-											<a href={live}>
-												<FaExternalLinkAlt />
-											</a>
+											{live}
 										</div>
 										<ul className="icons">
 											{tools.map((elem) => {
@@ -39,18 +37,19 @@ const Projects = () => {
 				</ul>
 			</div>
 			<div className="other-projects">
-				<ul>
+        <h1 className="other-projects-title">Other Projects</h1>
+				<ul className="container">
 					{projects
 						.filter(({ featured }) => !featured)
 						.map(({ title, description, live, tools }) => {
 							return (
-								<li>
+								<li className="other-projects-items">
 									<h1>{title}</h1>
 									<p>{description}</p>
 
-									<a href={live}>
-										<FaExternalLinkAlt />
-									</a>
+									{/* <a href={live}>
+										{live}<FaExternalLinkAlt />
+									</a> */}
 
 									<ul className="icons">
 										{tools.map((elem) => {
