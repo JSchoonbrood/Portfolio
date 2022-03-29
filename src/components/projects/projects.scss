@@ -51,7 +51,7 @@
         }
       }
     }
-    .project-even {
+    .project-left {
       @include project();
       .title {
         grid-area: 1 / 7 / 2 / 11;
@@ -74,7 +74,7 @@
       }
     }
 
-    .project-odd {
+    .project-right {
       @include project();
       .title {
         grid-area: 1 / 1 / 2 / 5;
