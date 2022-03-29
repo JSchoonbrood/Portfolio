@@ -1,5 +1,5 @@
 import React from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
+// import { FaExternalLinkAlt } from "react-icons/fa";
 import { VscGithubAlt } from "react-icons/vsc";
 // import { IoDocumentText } from "react-icons/io5";
 import projects from "./ProjectData";
