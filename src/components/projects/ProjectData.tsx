@@ -1,6 +1,5 @@
 import pdf from "../../resources/PollutionReport.pdf";
-import { placeholder, pollution_prediction} from "../../images/index";
-
+import { placeholder, pollution_prediction } from "../../images/index";
 
 const projects = [
   {
@@ -14,16 +13,21 @@ const projects = [
       <a
         href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
         target="_blank"
+        rel="noreferrer"
       >
         HTML5
       </a>,
-      <a href="https://www.typescriptlang.org/" target="_blank">
+      <a
+        href="https://www.typescriptlang.org/"
+        target="_blank"
+        rel="noreferrer"
+      >
         TypeScript
       </a>,
-      <a href="https://reactjs.org/" target="_blank">
+      <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
         React
       </a>,
-      <a href="https://sass-lang.com/" target="_blank">
+      <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
         SASS
       </a>,
     ],
@@ -37,13 +41,17 @@ const projects = [
     code: "/",
     live: "/",
     tools: [
-      <a href="https://www.python.org/" target="_blank">
+      <a href="https://www.python.org/" target="_blank" rel="noreferrer">
         Python
       </a>,
-      <a href="https://www.sqlite.org/index.html" target="_blank">
+      <a
+        href="https://www.sqlite.org/index.html"
+        target="_blank"
+        rel="noreferrer"
+      >
         Sqlite3
       </a>,
-      <a href="https://www.qt.io/" target="_blank">
+      <a href="https://www.qt.io/" target="_blank" rel="noreferrer">
         PySide2 (Qt)
       </a>,
     ],
@@ -51,19 +59,25 @@ const projects = [
   },
   {
     title: "Pollution Prediction",
-    image: <img src={pollution_prediction} className="image" alt="placeholder"></img>,
+    image: (
+      <img src={pollution_prediction} className="image" alt="placeholder"></img>
+    ),
     description:
       "Created as part of my third year project @ The University of York. The aim of the overall project was to reduce overall pollution exposure for all methods of transport situated on roads. The project used machine learning to determine pollution levels for roads based on attributes that could be extracted from open-source vehicle routing apps. Artifical data extracted from a live simulation was used as a proof of concept to train and test the machine learning model. The results were promising and showed upto 50% reduction in pollution exposure over existing vehicle routing methods within a 5minute car journey without any significant sacrifice of route quality (majority of the time, route quality was equal or improved",
     code: "/",
-    live: <a href={pdf} target="_blank">Report</a>,
+    live: (
+      <a href={pdf} target="_blank" rel="noreferrer">
+        Report
+      </a>
+    ),
     tools: [
-      <a href="https://www.python.org/" target="_blank">
+      <a href="https://www.python.org/" target="_blank" rel="noreferrer">
         Python
       </a>,
-      <a href="https://www.tensorflow.org/" target="_blank">
+      <a href="https://www.tensorflow.org/" target="_blank" rel="noreferrer">
         Tensorflow
       </a>,
-      <a href="https://www.eclipse.org/sumo/" target="_blank">
+      <a href="https://www.eclipse.org/sumo/" target="_blank" rel="noreferrer">
         Sumo
       </a>,
     ],
