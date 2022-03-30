@@ -1,7 +1,7 @@
 @use "./variables";
 
 .App {
-  height: 200%;
+  height: auto;
   width: 100%;
   position: absolute;
   scroll-behavior: smooth;
@@ -28,19 +28,48 @@
 }
 
 .gradient__bg {
-    /* ff 3.6+ */
-    background:-moz-radial-gradient(circle at 3% 3%, rgba(15, 50, 100, 1) 0%, rgba(10, 25, 47, 1) 100%, rgba(0, 188, 212, 1) 100%, rgba(238, 130, 238, 1) 100%);
+  /* ff 3.6+ */
+  background: -moz-radial-gradient(
+    circle at 3% 3%,
+    rgba(15, 50, 100, 1) 0%,
+    rgba(10, 25, 47, 1) 100%,
+    rgba(0, 188, 212, 1) 100%,
+    rgba(238, 130, 238, 1) 100%
+  );
 
-    /* safari 5.1+,chrome 10+ */
-    background:-webkit-radial-gradient(circle at 3% 3%, rgba(15, 50, 100, 1) 0%, rgba(10, 25, 47, 1) 100%, rgba(0, 188, 212, 1) 100%, rgba(238, 130, 238, 1) 100%);
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 3% 3%,
+    rgba(15, 50, 100, 1) 0%,
+    rgba(10, 25, 47, 1) 100%,
+    rgba(0, 188, 212, 1) 100%,
+    rgba(238, 130, 238, 1) 100%
+  );
 
-    /* opera 11.10+ */
-    background:-o-radial-gradient(circle at 3% 3%, rgba(15, 50, 100, 1) 0%, rgba(10, 25, 47, 1) 100%, rgba(0, 188, 212, 1) 100%, rgba(238, 130, 238, 1) 100%);
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 3% 3%,
+    rgba(15, 50, 100, 1) 0%,
+    rgba(10, 25, 47, 1) 100%,
+    rgba(0, 188, 212, 1) 100%,
+    rgba(238, 130, 238, 1) 100%
+  );
 
-    /* ie 10+ */
-    background:-ms-radial-gradient(circle at 3% 3%, rgba(15, 50, 100, 1) 0%, rgba(10, 25, 47, 1) 100%, rgba(0, 188, 212, 1) 100%, rgba(238, 130, 238, 1) 100%);
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 3% 3%,
+    rgba(15, 50, 100, 1) 0%,
+    rgba(10, 25, 47, 1) 100%,
+    rgba(0, 188, 212, 1) 100%,
+    rgba(238, 130, 238, 1) 100%
+  );
 
-    /* global 92%+ browsers support */
-    background:radial-gradient(circle at 3% 3%, rgba(15, 50, 100, 1) 0%, rgba(10, 25, 47, 1) 100%, rgba(0, 188, 212, 1) 100%, rgba(238, 130, 238, 1) 100%);
-
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 3% 3%,
+    rgba(15, 50, 100, 1) 0%,
+    rgba(10, 25, 47, 1) 100%,
+    rgba(0, 188, 212, 1) 100%,
+    rgba(238, 130, 238, 1) 100%
+  );
 }
