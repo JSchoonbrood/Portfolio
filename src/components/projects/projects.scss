@@ -153,6 +153,9 @@
     border-radius: 10px;
     background-color: variables.$accent-color;
     transition: bottom 300ms;
+    &:hover {
+      bottom: 6px;
+    }
   }
   &__elements-links {
     display: flex;
