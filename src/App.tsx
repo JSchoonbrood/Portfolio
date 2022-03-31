@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { About, Hero, Navbar, Projects, Left } from "./components";
-import { Footer } from "./containers";
 
 import "./App.scss";
 
@@ -25,7 +24,6 @@ function App() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
