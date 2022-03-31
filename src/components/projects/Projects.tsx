@@ -19,9 +19,7 @@ const Projects = () => {
                   }
                 >
                   <h1 className="featured__elements-title">{title}</h1>
-                  <div className="featured__elements-image">
-                    {image}
-                  </div>
+                  <div className="featured__elements-image">{image}</div>
                   <p className="featured__elements-desc">{description}</p>
                   <div className="featured__elements-links">
                     {code}
