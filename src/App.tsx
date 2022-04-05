@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { About, Hero, Navbar, Projects, Left } from "./components";
+import { About, Hero, Navbar, Projects, Left, Contact } from "./components";
 
 import "./App.scss";
 
@@ -19,6 +19,7 @@ function App() {
                 <Route path="/" element={<Hero />} />
                 <Route path="about" element={<About />} />
                 <Route path="projects" element={<Projects />} />
+                <Route path="contact" element={<Contact />} />
               </Routes>
             </div>
           </div>
