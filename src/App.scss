@@ -30,12 +30,13 @@
       height: fit-content;
       &-sidebar {
         position: fixed;
+        width: 10%;
         top: 10;
       }
       &-components {
         display: flex;
         flex-direction: column;
-        flex: 1; //Expands component to fill remaining horizontal space
+        width: 90%;
       }
     }
   }
