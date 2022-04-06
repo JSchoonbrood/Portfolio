@@ -20,11 +20,11 @@ const Form = () => {
 	};
 
 	return (
-		<div>
-			<form>
-				<label>
+		<div className="container__form">
+			<form className="form">
+				<label className="form__name">
 					Name:
-					<input
+					<input className="form__name-input"
 						name="contact_name"
 						type="string"
 						value={inputField.contact_name}
@@ -34,9 +34,9 @@ const Form = () => {
 					/>
 				</label>
 				<br />
-				<label>
+				<label className="form__email">
 					Email:
-					<input
+					<input className="form__email-input"
 						name="email"
 						type="string"
 						value={inputField.email}
@@ -46,9 +46,9 @@ const Form = () => {
 					/>
 				</label>
 				<br />
-				<label>
+				<label className="form__message">
 					Message:
-					<input
+					<input className="form__message-input"
 						name="message"
 						type="string"
 						value={inputField.message}
@@ -57,7 +57,7 @@ const Form = () => {
 						required
 					/>
 				</label>
-				<input type="submit" value="Submit" onClick={submitChange} />
+				<input type="submit" value="Submit" onClick={submitChange} className="form__submit" />
 			</form>
 		</div>
 	);
