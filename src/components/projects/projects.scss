@@ -20,7 +20,6 @@
       background-color: variables.$accent-color;
       color: variables.$text-color-default;
       font-size: variables.$text-font-size;
-      height: auto;
     }
     &-tools {
       display: flex;
@@ -65,9 +64,8 @@
       display: grid;
       grid-template-columns: repeat(10, 10%);
       grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
-      width: 65%;
-      height: fit-content;
-      margin: 15px;
+      width: 75%;
+      margin: 6vh;
     }
   }
 
