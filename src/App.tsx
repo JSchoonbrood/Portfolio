@@ -7,23 +7,24 @@ import "./App.scss";
 function App() {
   return (
     <div className="App" id="app">
-      <div className="gradient__bg">
-        <div className="margin-left">
+      <div className="layout gradient__bg">
+        <header className="layout__navbar">
           <Navbar />
-          <div className="main-screen">
-            <div className="sidebar">
-              <Left />
-            </div>
-            <div className="components">
-              <Routes>
-                <Route path="/" element={<Hero />} />
-                <Route path="about" element={<About />} />
-                <Route path="projects" element={<Projects />} />
-                <Route path="contact" element={<Contact />} />
-              </Routes>
-            </div>
+        </header>
+        <div className="layout__container">
+          <div className="layout__container-sidebar">
+            <Left />
+          </div>
+          <div className="layout__container-components">
+            <Routes>
+              <Route path="/" element={<Hero />} />
+              <Route path="about" element={<About />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="contact" element={<Contact />} />
+            </Routes>
           </div>
         </div>
+        
       </div>
     </div>
   );
