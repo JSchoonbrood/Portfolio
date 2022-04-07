@@ -44,7 +44,7 @@ const Navbar = () => {
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={navbarControl}
+            onClick={() => setExpanded(false)}
           >
             <AiOutlineHome className="icon" />
             Home
@@ -52,7 +52,7 @@ const Navbar = () => {
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={navbarControl}
+            onClick={() => setExpanded(false)}
           >
             <AiOutlineUser className="icon" />
             About
@@ -60,7 +60,7 @@ const Navbar = () => {
           <NavLink
             to="/projects"
             className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={navbarControl}
+            onClick={() => setExpanded(false)}
           >
             <MdOutlineMonitor className="icon" />
             Projects
@@ -68,7 +68,7 @@ const Navbar = () => {
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={navbarControl}
+            onClick={() => setExpanded(false)}
           >
             <AiOutlineContacts className="icon" />
             Contact
