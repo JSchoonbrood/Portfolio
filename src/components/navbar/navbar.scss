@@ -24,9 +24,6 @@
       padding-right: 0.4rem;
       width: 100%;
     }
-    .active {
-      color: variables.$text-color-active;
-    }
     .link {
       color: variables.$text-color-default;
       font-weight: variables.$navigation-font-weight;
@@ -38,6 +35,9 @@
       .icon {
         margin-right: 0.3rem;
       }
+    }
+    .active {
+      color: variables.$text-color-active;
     }
     .reload-button {
       position: absolute;
