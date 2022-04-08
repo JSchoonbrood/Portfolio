@@ -7,6 +7,8 @@ const Form = () => {
 		message: "",
 	});
 
+	const [emailValid, setValidity] = useState(true);
+
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const target = event.target;
 		const value = target.value;
@@ -15,8 +17,29 @@ const Form = () => {
     setInputField({...inputField, [name]: value,});
 	};
 
+	const handleMessageChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+		const target = event.target;
+		const value = target.value;
+		const name = target.name;
+
+    setInputField({...inputField, [name]: value,});
+	};
+
+	const validateEmail = (email: string) => {
+		return (
+			email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+		);
+	}
+
 	const submitChange = () => {
-		alert("Submitted");
+		if (validateEmail(inputField.email)) {
+			setValidity(true);
+			alert("True");
+		} else {
+			setValidity(false);
+			alert("False");
+		}
+		
 	};
 
 	return (
@@ -24,6 +47,7 @@ const Form = () => {
 			<form className="form">
 				<label className="form__name">
 					Name:
+					<br />
 					<input className="form__name-input"
 						name="contact_name"
 						type="string"
@@ -35,7 +59,11 @@ const Form = () => {
 				</label>
 				<br />
 				<label className="form__email">
-					Email:
+					<div className="form__email-title">
+						Email: 
+						<span className="form__email-title-error">{emailValid ? "" : "Invalid Email, Please Try Again"}</span>
+					</div>
+					<br />
 					<input className="form__email-input"
 						name="email"
 						type="string"
@@ -47,15 +75,14 @@ const Form = () => {
 				</label>
 				<br />
 				<label className="form__message">
-					Message:
-					<input className="form__message-input"
+					Message: 
+					<br />
+					<textarea className="form__message-input"
 						name="message"
-						type="string"
 						value={inputField.message}
-						onChange={handleChange}
+						onChange={handleMessageChange}
 						placeholder="Message"
-						required
-					/>
+						required></textarea>
 				</label>
 				<input type="submit" value="Submit" onClick={submitChange} className="form__submit" />
 			</form>
