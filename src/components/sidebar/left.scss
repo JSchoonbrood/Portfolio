@@ -2,7 +2,7 @@
 
 .sidebar {
   position: fixed;
-  top: 10;
+  top: 0;
   left: 0;
   padding: 0.3rem;
   margin: 0 1.1rem;
@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     ul {
-      height: 85vh;
+      height: 95vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -30,7 +30,7 @@
   }
   .sidebar-vl {
     border-left: 3px solid variables.$text-color-default;
-    height: 10vh;
+    height: 5vh;
     margin: auto;
   }
 }
