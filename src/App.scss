@@ -40,9 +40,14 @@
         flex-direction: column;
         width: 90%;
         height: 100%;
+        
       }
     }
   }
+}
+
+.blur {
+  filter: blur(10px);
 }
 
 .gradient__bg {
