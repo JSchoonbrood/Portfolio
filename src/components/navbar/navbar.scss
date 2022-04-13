@@ -2,9 +2,8 @@
 
 // // Large devices (desktops, less than 1200px)
 .navbar {
-  top: 0;
   height: auto;
-  position: fixed;
+  z-index: 999;
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
   background-color: transparent;
@@ -30,7 +29,6 @@
       font-size: variables.$navigation-font-size;
       margin: 0 1.1rem;
       text-decoration: none;
-      z-index: 999;
       .icon {
         margin-right: 0.3rem;
       }
@@ -68,6 +66,9 @@
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px), (max-width: 767.98px) {
   .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     .navbar__expand {
       .menu {
         display: block;
@@ -79,23 +80,32 @@
         background-color: transparent;
         border: 0px;
         font-size: variables.$navigation-font-size;
+        z-index: 999;
       }
     }
     .navbar__links {
+      z-index: 998;
+      position: relative;
       display: flex;
       flex-direction: column;
+      width: 100%;
+      margin: auto;
       .navbar__links_container {
         display: none;
         justify-content: center;
         align-items: center;
+        z-index: 999;
       }
       .link {
         display: flex;
-        position: relative;
         height: 3rem;
-        width: 90%;
+        width: 65%;
+        position: relative;
+        top: 0;
+        left: 0;
         justify-content: center;
         align-items: center;
+        border: 1px solid red;
         .icon {
           display: none;
         }
