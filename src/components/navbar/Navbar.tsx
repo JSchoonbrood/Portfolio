@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   AiOutlineHome,
   AiOutlineUser,
@@ -6,17 +7,21 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineMonitor } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../data/hooks";
+import { disable, enable } from "../../data/slices/focusSlice";
 import "./navbar.scss";
-import React, { useState } from "react";
 
 const Navbar = () => {
-  const [expanded, setExpanded] = useState(false);
+  const dispatch = useAppDispatch();
+  const value = useAppSelector((state) => state.focus.value);
 
   const navbarControl = () => {
-    if (expanded) {
-      setExpanded(false);
+    if (value === 1) {
+      dispatch(enable());
+      console.info(value);
     } else {
-      setExpanded(true);
+      dispatch(disable());
+      console.info(value);
     }
   };
 
@@ -36,7 +41,7 @@ const Navbar = () => {
         </button>
         <nav
           className={
-            expanded
+            value
               ? "active-nav navbar__links_container"
               : "navbar__links_container"
           }
@@ -44,7 +49,7 @@ const Navbar = () => {
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={() => setExpanded(false)}
+            onClick={() => dispatch(enable())}
           >
             <AiOutlineHome className="icon" />
             Home
@@ -52,7 +57,7 @@ const Navbar = () => {
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={() => setExpanded(false)}
+            onClick={() => dispatch(enable())}
           >
             <AiOutlineUser className="icon" />
             About
@@ -60,7 +65,7 @@ const Navbar = () => {
           <NavLink
             to="/projects"
             className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={() => setExpanded(false)}
+            onClick={() => dispatch(enable())}
           >
             <MdOutlineMonitor className="icon" />
             Projects
@@ -68,7 +73,7 @@ const Navbar = () => {
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={() => setExpanded(false)}
+            onClick={() => dispatch(enable())}
           >
             <AiOutlineContacts className="icon" />
             Contact
