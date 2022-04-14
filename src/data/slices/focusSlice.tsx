@@ -20,7 +20,7 @@ export const focusSlice = createSlice({
       state.value -= 1
     },
     setAmount: (state, action) => {
-      state.value = action.payload()
+      state.value = action.payload
     }
   }
 })
