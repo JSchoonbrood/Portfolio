@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import {
   AiOutlineHome,
   AiOutlineUser,
@@ -8,20 +8,35 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineMonitor } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../data/hooks";
-import { disable, enable } from "../../data/slices/focusSlice";
+import { disable, enable, setAmount } from "../../data/slices/focusSlice";
 import "./navbar.scss";
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
   const value = useAppSelector((state) => state.focus.value);
 
+  // const updateFocus = () => {
+  //   const [size, setSize] = useState([0]);
+
+  //   useEffect(() => {
+  //     function updateSize() {
+  //       setSize([window.innerWidth]);
+  //     }
+  //     window.addEventListener("resize", updateSize);
+  //   }, []);
+  // }
+
+
   const navbarControl = () => {
-    if (value === 1) {
-      dispatch(enable());
-      console.info(value);
+    console.info(value);
+    if (window.innerWidth > 767.98) {
+      dispatch(setAmount(0));
     } else {
-      dispatch(disable());
-      console.info(value);
+      if (value === 1) {
+        dispatch(enable());
+      } else {
+        dispatch(disable());
+      }
     }
   };
 
@@ -49,7 +64,7 @@ const Navbar = () => {
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={() => dispatch(enable())}
+            onClick={navbarControl}
           >
             <AiOutlineHome className="icon" />
             Home
@@ -57,7 +72,7 @@ const Navbar = () => {
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={() => dispatch(enable())}
+            onClick={navbarControl}
           >
             <AiOutlineUser className="icon" />
             About
@@ -65,7 +80,7 @@ const Navbar = () => {
           <NavLink
             to="/projects"
             className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={() => dispatch(enable())}
+            onClick={navbarControl}
           >
             <MdOutlineMonitor className="icon" />
             Projects
@@ -73,7 +88,7 @@ const Navbar = () => {
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={() => dispatch(enable())}
+            onClick={navbarControl}
           >
             <AiOutlineContacts className="icon" />
             Contact
