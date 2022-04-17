@@ -26,9 +26,16 @@ const Navbar = () => {
   //   }, []);
   // }
 
+  const mql = window.matchMedia("(max-width: 767.98px)")
+  mql.addEventListener("change", (event) => {
+    if (event.matches) {
+      dispatch(setAmount(1));
+    } else {
+      dispatch(setAmount(0));
+    }
+  })
 
   const navbarControl = () => {
-    console.info(value);
     if (window.innerWidth > 767.98) {
       dispatch(setAmount(0));
     } else {
