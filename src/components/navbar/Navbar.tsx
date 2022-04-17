@@ -16,10 +16,8 @@ const Navbar = () => {
   const value = useAppSelector((state) => state.focus.value);
 
   const mql = window.matchMedia("(max-width: 767.98px)");
-  mql.addEventListener("change", (event) => {
-    if (event.matches) {
-      dispatch(setAmount(1));
-    } else {
+  mql.addEventListener("change", (event) => { // Event listener for window resize to remove blur effect
+    if (!event.matches) {
       dispatch(setAmount(0));
     }
   });
