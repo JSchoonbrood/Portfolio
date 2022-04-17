@@ -1,0 +1,73 @@
+@use "./../../variables";
+
+.page {
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+  .container__form {
+    height: 100%;
+		width: 35%;
+    align-items: stretch;
+    background-color: white;
+  }
+}
+
+@mixin input_container {
+	width: 100%;
+	background-color: variables.$accent-color;
+	color: variables.$text-color-default;
+	border: 1px solid variables.$accent-color;
+	border-radius: 5px;
+	height: 2.2rem;
+	margin-top: 0.7rem;
+	padding: 0.5rem;
+	font-size: variables.$text-font-size;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+	font-size: variables.$text-font-size;
+	&__email {
+		display: flex;
+		flex-direction: column;
+		margin: 1rem;
+		&-input {
+			@include input_container();
+		}
+		&-title {
+			display: flex;
+			justify-content: space-between;
+			&-error {
+				color: red;
+			}
+		}
+	}
+	
+	&__message {
+		display: flex;
+		flex-direction: column;
+		margin: 1rem;
+		&-input {
+			@include input_container();
+			height: 9rem;
+			resize: vertical;
+			text-align: start;
+			font-size: variables.$text-font-size;
+		}
+	}
+	
+	&__name {
+		display: flex;
+		flex-direction: column;
+		margin: 1rem;
+		&-input {
+			@include input_container();
+		}
+	}
+
+	&__submit {
+		margin: 1rem;
+	}
+}

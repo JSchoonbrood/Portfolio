@@ -7,6 +7,7 @@
       width: 100%;
       color: variables.$text-color-active;
       font-size: variables.$subtitle-font-size;
+      align-items: center;
     }
     &-image {
       .image {
@@ -18,11 +19,12 @@
       padding: 30px;
       background-color: variables.$accent-color;
       color: variables.$text-color-default;
-      height: 28vh;
+      font-size: variables.$text-font-size;
     }
     &-tools {
       display: flex;
       justify-content: space-evenly;
+      align-items: center;
       list-style: none;
       color: variables.$text-color-default;
       font-size: variables.$navigation-font-size;
@@ -61,10 +63,9 @@
     &-items {
       display: grid;
       grid-template-columns: repeat(10, 10%);
-      grid-template-rows: repeat(5, 20%);
-      width: 65%;
-      height: fit-content;
-      margin: 10px;
+      grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+      width: 75%;
+      margin: 6vh;
     }
   }
 
@@ -74,8 +75,6 @@
       &-title {
         grid-area: 1 / 9 / 2 / 11;
         justify-content: flex-end;
-        position: relative;
-        align-items: center;
       }
       &-image {
         grid-area: 1 / 1 / -1 / 7;
@@ -130,7 +129,7 @@
 }
 
 .other {
-  margin-top: 4rem;
+  margin-top: 1rem;
   &__elements {
     display: grid;
     justify-content: center;
@@ -201,6 +200,7 @@
   align-items: center;
 }
 .page {
-  height: auto;
+  height: 100%;
   cursor: default;
+  width: 100%;
 }

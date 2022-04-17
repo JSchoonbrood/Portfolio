@@ -1,26 +1,31 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { About, Hero, Navbar, Projects, Left } from "./components";
+import { About, Hero, Navbar, Projects, Left, Contact } from "./components";
+import { useAppSelector } from "./data/hooks";
 
 import "./App.scss";
 
 function App() {
+  const focusState = useAppSelector((state) => state.focus.value);
   return (
     <div className="App" id="app">
-      <div className="gradient__bg">
-        <div className="margin-left">
+      <div className="layout gradient__bg">
+        <header className="layout__navbar">
           <Navbar />
-          <div className="main-screen">
-            <div className="sidebar">
-              <Left />
-            </div>
-            <div className="components">
-              <Routes>
-                <Route path="/" element={<Hero />} />
-                <Route path="about" element={<About />} />
-                <Route path="projects" element={<Projects />} />
-              </Routes>
-            </div>
+        </header>
+        <div className="layout__container">
+          <div className="layout__container-sidebar">
+            <Left />
+          </div>
+          <div
+            className={"layout__container-components" + (focusState ? " blur" : "")}
+          >
+            <Routes>
+              <Route path="/" element={<Hero />} />
+              <Route path="about" element={<About />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="contact" element={<Contact />} />
+            </Routes>
           </div>
         </div>
       </div>
