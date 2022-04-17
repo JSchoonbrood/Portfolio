@@ -1,4 +1,4 @@
-import { AnyAction, configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import focusSlice from "./slices/focusSlice";
 
 export const store = configureStore({

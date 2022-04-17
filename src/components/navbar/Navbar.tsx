@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React from "react";
 import {
   AiOutlineHome,
   AiOutlineUser,
@@ -14,17 +14,6 @@ import "./navbar.scss";
 const Navbar = () => {
   const dispatch = useAppDispatch();
   const value = useAppSelector((state) => state.focus.value);
-
-  // const updateFocus = () => {
-  //   const [size, setSize] = useState([0]);
-
-  //   useEffect(() => {
-  //     function updateSize() {
-  //       setSize([window.innerWidth]);
-  //     }
-  //     window.addEventListener("resize", updateSize);
-  //   }, []);
-  // }
 
   const mql = window.matchMedia("(max-width: 767.98px)")
   mql.addEventListener("change", (event) => {

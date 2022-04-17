@@ -1,4 +1,4 @@
-import React, { Ref } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { About, Hero, Navbar, Projects, Left, Contact } from "./components";
 import { useAppSelector } from "./data/hooks";
