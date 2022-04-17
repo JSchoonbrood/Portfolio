@@ -19,30 +19,38 @@
     flex-direction: column;
     overflow: auto;
     width: 100%;
-    height: 100%;
     &__navbar {
+      margin: 0;
+      padding: 0;
       position: sticky;
       top: 0;
+      height: 8vh;
+      z-index: 999;
     }
     &__container {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      height: 100%;
+      
       &-sidebar {
         position: fixed;
         top: 10;
-        height: 100%;
         width: 10%;
+        z-index: 998;
       }
       &-components {
         display: flex;
         flex-direction: column;
         width: 90%;
-        height: 100%;
-        
+        z-index: 0;
       }
     }
+  }
+}
+
+@media (max-width: 575.98px), (max-width: 767.98px) {
+  .layout__container-sidebar {
+    display: None;
   }
 }
 
