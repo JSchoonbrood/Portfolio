@@ -6,7 +6,7 @@ import { useAppSelector } from "./data/hooks";
 import "./App.scss";
 
 function App() {
-  const value = useAppSelector((state) => state.focus.value);
+  const focusState = useAppSelector((state) => state.focus.value);
   return (
     <div className="App" id="app">
       <div className="layout gradient__bg">
@@ -17,12 +17,9 @@ function App() {
           <div className="layout__container-sidebar">
             <Left />
           </div>
-          <div 
-          className={
-            value
-              ? "layout__container-components blur"
-              : "layout__container-components"
-          }>
+          <div
+            className={"layout__container-components" + (focusState ? " blur" : "")}
+          >
             <Routes>
               <Route path="/" element={<Hero />} />
               <Route path="about" element={<About />} />
