@@ -15,14 +15,14 @@ const Navbar = () => {
   const dispatch = useAppDispatch();
   const value = useAppSelector((state) => state.focus.value);
 
-  const mql = window.matchMedia("(max-width: 767.98px)")
+  const mql = window.matchMedia("(max-width: 767.98px)");
   mql.addEventListener("change", (event) => {
     if (event.matches) {
       dispatch(setAmount(1));
     } else {
       dispatch(setAmount(0));
     }
-  })
+  });
 
   const navbarControl = () => {
     if (window.innerWidth > 767.98) {
