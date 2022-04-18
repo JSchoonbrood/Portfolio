@@ -85,12 +85,15 @@
     .navbar__links {
       background-color: variables.$accent-color;
       z-index: 998;
-      position: relative;
+      position: fixed;
+      top: 0;
       display: flex;
       flex-direction: column;
       width: 100%;
-      margin: auto;
+      // margin: auto;
       .navbar__links_container {
+        margin-top: 0.6rem;
+        margin-bottom: 0.6rem;
         display: none;
         justify-content: center;
         align-items: center;
