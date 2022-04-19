@@ -8,28 +8,27 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineMonitor } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../data/hooks";
-import { disable, enable, setAmount } from "../../data/slices/focusSlice";
+import { setFocus } from "../../data/slices/focusSlice";
 import "./navbar.scss";
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
-  const value = useAppSelector((state) => state.focus.value);
+  const focusState = useAppSelector((state) => state.focus.value);
 
   const mql = window.matchMedia("(max-width: 767.98px)");
-  mql.addEventListener("change", (event) => { // Event listener for window resize to remove blur effect
+  mql.addEventListener("change", (event) => {
+    // Event listener for window resize to remove blur effect
     if (!event.matches) {
-      dispatch(setAmount(0));
+      dispatch(setFocus(false));
     }
   });
 
   const navbarControl = () => {
-    if (window.innerWidth > 767.98) {
-      dispatch(setAmount(0));
-    } else {
-      if (value === 1) {
-        dispatch(enable());
+    if (window.innerWidth < 767.98) { // Only activate for mobile / small devices view
+      if (focusState === true) {
+        dispatch(setFocus(false));
       } else {
-        dispatch(disable());
+        dispatch(setFocus(true));
       }
     }
   };
@@ -50,7 +49,7 @@ const Navbar = () => {
         </button>
         <nav
           className={
-            value
+            focusState
               ? "active-nav navbar__links_container"
               : "navbar__links_container"
           }
