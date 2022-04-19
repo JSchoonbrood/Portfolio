@@ -20,6 +20,11 @@
         color: variables.$text-color-active;
       }
     }
+    &-bio {
+      font-size: variables.$text-font-size;
+      font-weight: variables.$text-font-weight;
+      color: variables.$text-color-default;
+    }
   }
   &__image {
     display: flex;
@@ -28,6 +33,32 @@
     img {
       width: 400px;
     }
+  }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px), (max-width: 767.98px) {
+  .hero {
+    display: flex;
+    height: 100vh;
+    &__content {
+      align-items: center;
+      justify-content: center;
+      &-title {
+        display: inline-block;
+      }
+      &-bio {
+        text-align: center;
+        margin: 1rem;
+      }
+    }
+    &__image {
+      display: None;
+    }
+  }
+
+  .waving-hand {
+    display: None;
   }
 }
 
