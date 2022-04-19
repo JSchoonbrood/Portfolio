@@ -45,6 +45,7 @@ const projects = [
       </a>,
     ],
     featured: true,
+    status: false,
   },
   {
     title: "Engine Logger",
@@ -82,6 +83,7 @@ const projects = [
       </a>,
     ],
     featured: true,
+    status: false,
   },
   {
     title: "Pollution Prediction",
@@ -117,6 +119,7 @@ const projects = [
       </a>,
     ],
     featured: true,
+    status: true,
   },
   {
     title: "Bike Rental Prediction",
@@ -140,6 +143,7 @@ const projects = [
     ),
     tools: ["Python", "Tensorflow / Keras"],
     featured: false,
+    status: true,
   },
   {
     title: "Folder Security",
@@ -163,6 +167,7 @@ const projects = [
     ),
     tools: ["Python", "PyQt4 (Qt)", "Win32 API", "Bcrypt"],
     featured: false,
+    status: true,
   },
   {
     title: "Store Management",
@@ -186,6 +191,7 @@ const projects = [
     ),
     tools: ["Python", "PyQt4 (Qt)", "BCrypt", "Matplotlib"],
     featured: false,
+    status: true,
   },
 ];
 
