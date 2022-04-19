@@ -1,5 +1,14 @@
 @use "./../../variables";
 
+@media (min-width: 1921px) {
+  .featured {
+    width: 65%;
+  }
+  .other {
+    width: 65%;
+  }
+}
+
 @mixin project {
   @at-root .featured__elements {
     &-title {
