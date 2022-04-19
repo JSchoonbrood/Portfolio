@@ -36,6 +36,7 @@ const Projects = () => {
                       </div>
                     </div>
                     <span className="featured__elements-status"></span>
+                    <span className="featured__elements-image-filter"></span>
                     <div className="featured__elements-image">{image}</div>
                     <p className="featured__elements-desc">{description}</p>
                     <div className="featured__elements-links">
