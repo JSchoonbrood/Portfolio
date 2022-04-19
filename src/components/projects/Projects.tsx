@@ -23,7 +23,6 @@ const Projects = () => {
                   >
                     <div className="featured__elements-title">
                       <h1 className="featured__elements-title-text">{title}</h1>
-                      <br />
                       <div className="featured__elements-title-status">
                         {status ? (
                           <span className="dot-green tooltip">
