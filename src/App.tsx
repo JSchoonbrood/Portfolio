@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { About, Hero, Navbar, Projects, Sidebar, Contact } from "./components";
+import { About, Hero, Navbar, Projects, Sidebar, Contact, Archive} from "./components";
 import { useAppSelector } from "./data/hooks";
 
 import "./App.scss";
@@ -25,6 +25,7 @@ function App() {
               <Route path="about" element={<About />} />
               <Route path="projects" element={<Projects />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="archive" element={<Archive />} />
             </Routes>
           </div>
         </div>
