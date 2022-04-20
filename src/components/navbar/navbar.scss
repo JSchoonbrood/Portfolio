@@ -6,7 +6,7 @@
   z-index: 999;
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
-  background-color: transparent;
+  background-color: variables.$accent-color-nav;
   width: 100%;
   .navbar__expand {
     .menu {
@@ -68,6 +68,8 @@
   .navbar {
     padding-top: 0rem;
     padding-bottom: 0rem;
+    height: 6vh;
+    background-color: transparent;
     .navbar__expand {
       .menu {
         display: block;
@@ -121,7 +123,7 @@
       .active-nav {
         display: flex;
         flex-direction: column;
-        height: 13rem;
+        height: 23vh;
       }
       .reload-button {
         position: absolute;
@@ -149,7 +151,3 @@
 
 // XX-Large devices (larger desktops)
 // No media query since the xxl breakpoint has no upper bound on its width
-
-.navbar-scrolled {
-  background-color: variables.$accent-color-nav;
-}
