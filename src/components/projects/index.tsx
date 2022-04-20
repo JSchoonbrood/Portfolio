@@ -2,6 +2,7 @@ import React from "react";
 import AdditionalProjects from "./components/AdditionalProjects";
 import FeaturedProjects from "./components/FeaturedProjects";
 import "./projects.scss";
+import { NavLink } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -9,7 +10,7 @@ const Projects = () => {
       <FeaturedProjects />
       <AdditionalProjects />
       <div>
-        <h1>View The Archive</h1>
+        <NavLink to="archive"><h1 className="archive-title">View The Archive</h1></NavLink>
       </div>
     </div>
   );
