@@ -9,10 +9,12 @@ const Hero = () => {
       <div className="hero__content">
         <h1 className="hero__content-title">
           Hi! <span className="waving-hand">👋🏻</span>
-          <br />
           I'm <span className="hero__content-title-span">Jake!</span>
         </h1>
         <Desc />
+        <p className="hero__content-bio">
+          I'm a software engineer looking to learn new technologies.
+        </p>
       </div>
 
       <div className="hero__image">

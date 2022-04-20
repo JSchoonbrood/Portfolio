@@ -4,7 +4,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 import "./left.scss";
 
-const left = () => {
+const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar__elements">
@@ -43,4 +43,4 @@ const left = () => {
   );
 };
 
-export default left;
+export default Sidebar;

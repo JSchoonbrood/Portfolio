@@ -7,9 +7,9 @@ class Desc extends React.Component {
 			<TypeWriter
 				options={{
 					strings: [
-						"Front-End Developer",
-						"Computer Science Graduate",
-						"Software Developer",
+						"Computer Science Grad",
+						"Software Engineer",
+						"Front-End Dev",
 					],
 					autoStart: true,
 					loop: true,

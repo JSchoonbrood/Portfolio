@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { About, Hero, Navbar, Projects, Left, Contact } from "./components";
+import { About, Hero, Navbar, Projects, Sidebar, Contact, Archive} from "./components";
 import { useAppSelector } from "./data/hooks";
 
 import "./App.scss";
@@ -15,7 +15,7 @@ function App() {
         </header>
         <div className="layout__container">
           <div className="layout__container-sidebar">
-            <Left />
+            <Sidebar />
           </div>
           <div
             className={"layout__container-components" + (focusState ? " blur" : "")}
@@ -25,6 +25,7 @@ function App() {
               <Route path="about" element={<About />} />
               <Route path="projects" element={<Projects />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="archive" element={<Archive />} />
             </Routes>
           </div>
         </div>
