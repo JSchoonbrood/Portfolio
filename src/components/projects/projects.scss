@@ -300,7 +300,17 @@
   &__elements {
     display: flex;
     flex-direction: column;
-    
+    &-desc {
+      font-size: variables.$text-font-size;
+    }
+    &-tools {
+      font-size: variables.$text-font-size;
+    }
+    &-links {
+      .link {
+        font-size: variables.$text-font-size;
+      }
+    }
   }
   }
 
@@ -324,6 +334,9 @@
   @include title();
 }
 
+.archive-title {
+  @include title();
+}
 
 .page {
   // margin-top: 6vh;
