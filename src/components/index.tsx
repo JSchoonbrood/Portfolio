@@ -4,4 +4,4 @@ export { default as Navbar } from "./navbar";
 export { default as Projects } from "./projects";
 export { default as Sidebar } from "./sidebar";
 export { default as Contact } from "./contact";
-
+export { default as Archive } from "./archive";
