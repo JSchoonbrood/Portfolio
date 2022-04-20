@@ -1,7 +1,7 @@
-export { default as About } from "./about/About";
-export { default as Hero } from "./hero/Hero";
-export { default as Navbar } from "./navbar/Navbar";
-export { default as Projects } from "./projects/Projects";
-export { default as Left } from "./sidebar/Left";
-export { default as Contact } from "./contact/Contact";
+export { default as About } from "./about";
+export { default as Hero } from "./hero";
+export { default as Navbar } from "./navbar";
+export { default as Projects } from "./projects";
+export { default as Sidebar } from "./sidebar";
+export { default as Contact } from "./contact";
 
