@@ -10,7 +10,7 @@ const Projects = () => {
       <FeaturedProjects />
       <AdditionalProjects />
       <div>
-        <NavLink to="archive"><h1 className="archive-title">View The Archive</h1></NavLink>
+        <NavLink to="/archive"><h1 className="archive-title">View The Archive</h1></NavLink>
       </div>
     </div>
   );
