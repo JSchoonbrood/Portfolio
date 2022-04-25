@@ -1,0 +1,54 @@
+@use "./../../variables";
+
+.archive {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  width: 60vw;
+  border-collapse: collapse;
+  @media (max-width: 575.98px), (max-width: 767.98px) {
+    width: 95vw;
+  }
+  &__body {
+    background-color: variables.$accent-color;
+    &-row {
+      height: 5vh;
+      width: 30vw;
+      td {
+        display: inline-flex;
+        width: 15%;
+        justify-content: center;
+        padding: 1rem;
+        font-size: variables.$navigation-font-size;
+        font-weight: variables.$navigation-font-weight;
+        color: variables.$text-color-default;
+      }
+      td:nth-child(2) {
+        width: 70%;
+      }
+    }
+    &-row:hover {
+      td {
+        color: variables.$text-color-active;
+      }
+      
+    }
+  }
+}
+
+.expanded {
+  background-color: variables.$text-color-default;
+  td {
+    color: variables.$text-color-active;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: variables.$text-color-active;
+}
