@@ -1,0 +1,64 @@
+@use "./../../variables";
+
+.archive {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  width: 60vw;
+  cursor: default;
+  border-collapse: collapse;
+  @media (max-width: 575.98px), (max-width: 767.98px) {
+    width: 95vw;
+  }
+  &__body {
+    background-color: variables.$accent-color;
+    &-row {
+      height: 5vh;
+      width: 30vw;
+      td {
+        display: inline-flex;
+        width: 15%;
+        justify-content: center;
+        padding: 1rem;
+        font-size: variables.$navigation-font-size;
+        font-weight: variables.$navigation-font-weight;
+        color: variables.$text-color-default;
+      }
+      td:nth-child(2) {
+        width: 70%;
+      }
+    }
+    &-row:hover {
+      td {
+        color: variables.$text-color-active;
+      }
+    }
+  }
+}
+
+.expanded {
+  background-color: variables.$text-color-default;
+  td {
+    color: variables.$text-color-active;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: variables.$text-color-active;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
