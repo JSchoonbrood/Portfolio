@@ -1,7 +1,6 @@
 import { BiRightArrow, BiDownArrow } from "react-icons/bi";
 import { AiOutlineFolder } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
-import { isVariableStatement } from "typescript";
 
 const TableData = [
   {
