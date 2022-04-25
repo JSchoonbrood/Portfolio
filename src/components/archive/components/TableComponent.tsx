@@ -1,4 +1,3 @@
-import { tab } from "@testing-library/user-event/dist/tab";
 import React, { useMemo } from "react";
 import { useTable, useExpanded } from "react-table";
 import TableData, { COLUMNS } from "./TableData";
