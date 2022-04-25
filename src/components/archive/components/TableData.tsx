@@ -1,20 +1,22 @@
 import { BiRightArrow, BiDownArrow } from "react-icons/bi";
+import { AiOutlineFolder } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
+import { isVariableStatement } from "typescript";
 
 const TableData = [
   {
     id: "1",
     name: "MaxxECU",
-    lastModified: "Today",
+    type: <AiOutlineFolder />,
     subRows: [
-      {name: <NavLink to="immosetup">Immobiliser Setup</NavLink>},
+      {name: <NavLink to="immosetup" className="link">Immobiliser Setup</NavLink>},
       {name: "Clutch Slip Logging"}
     ],
   },
   {
     id: "2",
     name: "Calculators",
-    lastModified: "Today",
+    type: <AiOutlineFolder />,
     subRows: [
       {name: "Wheel Diamater Calculator"},
       {name: "Gear Ratio Calculator"}
@@ -37,7 +39,6 @@ export const COLUMNS = [
       <span
         {...row.getToggleRowExpandedProps({
           style: {
-            // expanded styles
           },
         })}>
         {row.isExpanded ? <BiDownArrow /> : <BiRightArrow />}
@@ -49,12 +50,12 @@ export const COLUMNS = [
     accessor: "id",
   },
   {
-    Header: "Name",
+    Header: "",
     accessor: "name",
   },
   {
-    Header: "Last Modified",
-    accessor: "lastModified",
+    Header: "",
+    accessor: "type",
   },
 ];
 
