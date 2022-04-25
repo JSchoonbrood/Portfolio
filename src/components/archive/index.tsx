@@ -1,6 +1,6 @@
-import React from 'react'
-import Table from "./components/TableComponent"
-import "./table.scss"
+import React from "react";
+import Table from "./components/TableComponent";
+import "./table.scss";
 
 const Archive = () => {
   return (
@@ -8,8 +8,7 @@ const Archive = () => {
       <h1 className="archive-title">Archive</h1>
       <Table />
     </div>
-    
-  )
-}
+  );
+};
 
-export default Archive
+export default Archive;

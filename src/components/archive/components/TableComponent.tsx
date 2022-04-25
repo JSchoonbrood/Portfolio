@@ -30,7 +30,7 @@ const Table = () => {
       state = true;
     }
     tableInstance.toggleRowExpanded(row.index, state);
-  }
+  };
 
   return (
     <div>

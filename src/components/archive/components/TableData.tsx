@@ -8,8 +8,14 @@ const TableData = [
     name: "MaxxECU",
     type: <AiOutlineFolder />,
     subRows: [
-      {name: <NavLink to="immosetup" className="link">Immobiliser Setup</NavLink>},
-      {name: "Clutch Slip Logging"}
+      {
+        name: (
+          <NavLink to="immosetup" className="link">
+            Immobiliser Setup
+          </NavLink>
+        ),
+      },
+      { name: "Clutch Slip Logging" },
     ],
   },
   {
@@ -17,8 +23,8 @@ const TableData = [
     name: "Calculators",
     type: <AiOutlineFolder />,
     subRows: [
-      {name: "Wheel Diamater Calculator"},
-      {name: "Gear Ratio Calculator"}
+      { name: "Wheel Diamater Calculator" },
+      { name: "Gear Ratio Calculator" },
     ],
   },
 ];
@@ -27,22 +33,22 @@ export const COLUMNS = [
   {
     id: "expander",
     // @ts-ignore
-    Header: ({getToggleAllRowsExpandedProps, isAllRowsExpanded }) => (
+    Header: ({ getToggleAllRowsExpandedProps, isAllRowsExpanded }) => (
       <span {...getToggleAllRowsExpandedProps()}>
         {isAllRowsExpanded ? <BiDownArrow /> : <BiRightArrow />}
       </span>
     ),
     // @ts-ignore
-    Cell: ({row}) =>
-    row.canExpand ? (
-      <span
-        {...row.getToggleRowExpandedProps({
-          style: {
-          },
-        })}>
-        {row.isExpanded ? <BiDownArrow /> : <BiRightArrow />}
-      </span>
-    ) : null,
+    Cell: ({ row }) =>
+      row.canExpand ? (
+        <span
+          {...row.getToggleRowExpandedProps({
+            style: {},
+          })}
+        >
+          {row.isExpanded ? <BiDownArrow /> : <BiRightArrow />}
+        </span>
+      ) : null,
   },
   {
     Header: "ID",
