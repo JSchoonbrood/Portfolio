@@ -1,3 +1,4 @@
+import { tab } from "@testing-library/user-event/dist/tab";
 import React, { useMemo } from "react";
 import { useTable, useExpanded } from "react-table";
 import TableData, { COLUMNS } from "./TableData";
@@ -5,7 +6,7 @@ import TableData, { COLUMNS } from "./TableData";
 const Table = () => {
   const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => TableData, []);
-  const initialState = { hiddenColumns: ['id'] };
+  const initialState = { hiddenColumns: ["id"] };
 
   // @ts-ignore
   const tableInstance = useTable({ columns, data, initialState }, useExpanded);
@@ -13,11 +14,24 @@ const Table = () => {
   const {
     getTableProps,
     getTableBodyProps,
-    headerGroups,
+    // headerGroups,
     rows,
     prepareRow,
     state: { expanded },
   } = tableInstance;
+
+  // @ts-expect-error
+  const handleClick = (row) => {
+    console.info(row);
+    let state = false;
+    console.log(expanded);
+    if (expanded[row.index]) {
+      state = false;
+    } else {
+      state = true;
+    }
+    tableInstance.toggleRowExpanded(row.index, state);
+  }
 
   return (
     <div>
@@ -35,7 +49,13 @@ const Table = () => {
           {rows.map((row, i) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()} className={"table__body-row" + (row.depth === 1 ? " expanded" : "")}>
+              <tr
+                {...row.getRowProps()}
+                className={
+                  "table__body-row" + (row.depth === 1 ? " expanded" : "")
+                }
+                onClick={() => handleClick(row)}
+              >
                 {row.cells.map((cell) => {
                   return (
                     <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
