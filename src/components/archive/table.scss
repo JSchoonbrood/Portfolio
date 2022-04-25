@@ -10,6 +10,7 @@
 
 .table {
   width: 60vw;
+  cursor: default;
   border-collapse: collapse;
   @media (max-width: 575.98px), (max-width: 767.98px) {
     width: 95vw;
@@ -51,4 +52,14 @@
 .link {
   text-decoration: none;
   color: variables.$text-color-active;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

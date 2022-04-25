@@ -35,7 +35,7 @@ const Table = () => {
 
   return (
     <div>
-      <table {...getTableProps()} className="table">
+      <table {...getTableProps()} className="table noselect">
         {/* <thead className="table__header">
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()} className="table__header-row">
