@@ -30,6 +30,7 @@ const TableData = [
     subRows: [
       { name: "Wheel Diamater Calculator" },
       { name: "Gear Ratio Calculator" },
+      { name: "Bosch ME7 KRKTE Calculator" },
     ],
   },
 ];
