@@ -1,4 +1,3 @@
-import { BiRightArrow, BiDownArrow } from "react-icons/bi";
 import { AiOutlineFolder, AiOutlineFolderOpen } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
@@ -21,13 +20,7 @@ const TableData = [
     id: "1",
     name: "MaxxECU",
     subRows: [
-      {
-        name: (
-          <NavLink to="immosetup" className="link">
-            Immobiliser Setup
-          </NavLink>
-        ),
-      },
+      { name: "Immobiliser Setup" },
       { name: "Clutch Slip Logging" },
     ],
   },
@@ -50,15 +43,32 @@ export const COLUMNS = [
   {
     Header: "",
     accessor: "name",
+    // @ts-ignore
+    Cell: ({row}) => { // Code to automatically link collapsible rows (depth > 0)
+      const data = row.original;
+      if (row.depth === 0) {
+        return (
+          <span>
+            {data.name}
+          </span>
+        )
+      } else {
+        const link_address = data.name.replace(/\s/g, "-").toLowerCase();; // Replaces whitespace in link address with hyphens
+        return (
+          <NavLink to={"/archive/"+link_address} className="table__body-link">
+            {data.name}
+          </NavLink>
+        )
+      }
+    }
   },
   {
     id: "expander",
-    // @ts-ignore
-    Header: ({ getToggleAllRowsExpandedProps, isAllRowsExpanded }) => (
-      <span {...getToggleAllRowsExpandedProps()}>
-        {isAllRowsExpanded ? <AiOutlineFolderOpen /> : <AiOutlineFolder />}
-      </span>
-    ),
+    // Header: ({ getToggleAllRowsExpandedProps, isAllRowsExpanded }) => (
+    //   <span {...getToggleAllRowsExpandedProps()}>
+    //     {isAllRowsExpanded ? <AiOutlineFolderOpen /> : <AiOutlineFolder />}
+    //   </span>
+    // ),
     // @ts-ignore
     Cell: ({ row }) =>
       row.canExpand ? (
