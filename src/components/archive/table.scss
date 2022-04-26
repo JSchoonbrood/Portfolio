@@ -46,6 +46,14 @@
         color: variables.$text-color-active;
       }
     }
+    &-link {
+      text-decoration: none;
+      color: variables.$text-color-default;
+      width: 100%;
+      &:hover {
+        color: variables.$text-color-active;
+      }
+    }
   }
 }
 
@@ -54,15 +62,6 @@
   td {
     color: variables.$text-color-default;
   }
-}
-
-.link {
-  text-decoration: none;
-  color: variables.$text-color-default;
-}
-
-.link:hover {
-  color: variables.$text-color-active;
 }
 
 .noselect {
