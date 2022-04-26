@@ -66,6 +66,38 @@
   }
 }
 
+@mixin project-small-desktop {
+  @media (max-width: 1399.98px) {
+    .featured__elements {
+      &-title {
+        &-status {
+          display: none;
+        }
+      }
+      &-desc {
+        // width: 35vw;
+        height: 30vh;
+        overflow-y: scroll;
+        z-index: 1;
+      }
+      &-image {
+        overflow: hidden;
+        z-index: 0;
+        .image {
+          transform: scale(1.19);
+        }
+      }
+      &-links {
+        display: None;
+      }
+
+      &-tools {
+        display: None;
+      }
+    }
+  }
+}
+
 @mixin project-desktop {
   @at-root .featured__elements {
     &-title {
@@ -187,6 +219,7 @@
         }
       }
     }
+    @include project-small-desktop();
     @include project-mobile();
   }
 
@@ -228,6 +261,7 @@
         }
       }
     }
+    @include project-small-desktop();
     @include project-mobile();
   }
 }
@@ -237,13 +271,14 @@
   &__elements {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 20%);
+    grid-template-columns: repeat(3, 30vw);
     grid-auto-flow: row;
     list-style: none;
   }
   &__elements-desc {
     padding: 1rem;
     color: variables.$text-color-default;
+    font-size: variables.$text-font-size;
   }
   &__elements-items {
     display: flex;
@@ -291,27 +326,34 @@
     align-items: bottom;
     list-style: none;
     margin-top: auto;
+    font-size: variables.$text-font-size;
   }
   &__elements-tools-item {
     color: variables.$text-color-default-shadow;
   }
 
   @media (max-width: 575.98px), (max-width: 767.98px) {
-  &__elements {
-    display: flex;
-    flex-direction: column;
-    &-desc {
-      font-size: variables.$text-font-size;
-    }
-    &-tools {
-      font-size: variables.$text-font-size;
-    }
-    &-links {
-      .link {
+    &__elements {
+      display: flex;
+      flex-direction: column;
+      &-desc {
         font-size: variables.$text-font-size;
+      }
+      &-tools {
+        font-size: variables.$text-font-size;
+      }
+      &-links {
+        .link {
+          font-size: variables.$text-font-size;
+        }
       }
     }
   }
+
+  @media (max-width: 1399.99px) {
+    &__elements {
+      grid-template-columns: repeat(3, 30vw);
+    }
   }
 
 }
