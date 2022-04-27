@@ -6,8 +6,8 @@
   z-index: 999;
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
-  background-color: variables.$accent-color-nav;
-  width: 100%;
+  width: 80%;
+  // background-color: variables.$accent-color-nav;
   .navbar__expand {
     .menu {
       display: none;
@@ -15,7 +15,7 @@
   }
   .navbar__links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     .navbar__links_container {
       display: flex;
       justify-content: flex-end;
@@ -37,10 +37,7 @@
       color: variables.$text-color-active;
     }
     .reload-button {
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: 1rem;
+      padding: 0.4rem;
       background-color: transparent;
       border: 0px;
       color: variables.$text-color-default;
@@ -70,9 +67,10 @@
     padding-bottom: 0rem;
     height: 6vh;
     background-color: transparent;
+    width: 100%;
     .navbar__expand {
       .menu {
-        display: block;
+        display: initial;
         position: absolute;
         top: 0;
         right: 0;
