@@ -54,7 +54,7 @@ export const COLUMNS = [
           </span>
         )
       } else {
-        const link_address = data.name.replace(/\s/g, "-").toLowerCase();; // Replaces whitespace in link address with hyphens
+        const link_address = data.name.replace(/\s/g, "-").toLowerCase(); // Replaces whitespace in link address with hyphens
         return (
           <NavLink to={"/archive/"+link_address} className="table__body-link">
             {data.name}
