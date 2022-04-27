@@ -23,7 +23,7 @@
           display: none;
         }
       }
-  &-image-filter {
+      &-image-filter {
         grid-area: 1 / 1 / 6 / 11;
         background-color: variables.$accent-color-opacity;
         width: 100%;
@@ -56,7 +56,7 @@
       &-links {
         grid-area: 5 / 1 / 6 / 11;
         justify-content: space-evenly;
-        align-items: flex-start;;
+        align-items: flex-start;
         z-index: 2;
         .link {
           font-size: variables.$text-font-size;
@@ -271,7 +271,7 @@
   &__elements {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 30vw);
+    grid-template-columns: repeat(3, 30%);
     grid-auto-flow: row;
     list-style: none;
   }
@@ -352,12 +352,10 @@
 
   @media (max-width: 1399.99px) {
     &__elements {
-      grid-template-columns: repeat(3, 30vw);
+      grid-template-columns: repeat(3, 30%);
     }
   }
-
 }
-
 
 @mixin title {
   display: flex;
