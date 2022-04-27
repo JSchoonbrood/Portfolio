@@ -16,6 +16,7 @@
       font-weight: variables.$hero-font-weight;
       color: variables.$text-color-default;
       letter-spacing: -0.04rem;
+      text-align: center;
       &-span {
         color: variables.$text-color-active;
       }
@@ -36,6 +37,19 @@
   }
 }
 
+@mixin hero-buttons {
+  background-color: variables.$darkest;
+  font-size: variables.$navigation-font-size;
+  border-radius: 5px;
+  padding: 1rem;
+  text-decoration: none;
+  color: variables.$text-color-default;
+  margin: 0.3rem;
+  margin-top: 1rem;
+  width: 8rem;
+  text-align: center;
+}
+
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px), (max-width: 767.98px) {
   .hero {
@@ -44,12 +58,24 @@
     &__content {
       align-items: center;
       justify-content: center;
+      position: relative;
+      bottom: 4vh;
       &-title {
         display: inline-block;
       }
       &-bio {
         text-align: center;
-        margin: 1rem;
+        margin-top: 2.4rem;
+      }
+      &-buttons {
+        display: flex;
+        &-project {
+          @include hero-buttons;
+          background-color: variables.$primary-bright;
+        }
+        &-github {
+          @include hero-buttons;
+        }
       }
     }
     &__image {
@@ -63,13 +89,19 @@
 }
 
 .Typewriter__wrapper {
+  display: None;
   font-size: variables.$subtitle-font-size;
-  color: variables.$text-color-active;
+  color: variables.$text-color-default;
+  position: relative;
+  top: 1rem;
 }
 
 .Typewriter__cursor {
+  display: None;
   font-size: variables.$subtitle-font-size;
-  color: variables.$text-color-active;
+  color: variables.$text-color-default;
+  position: relative;
+  top: 0.9rem;
 }
 
 .waving-hand:hover {
