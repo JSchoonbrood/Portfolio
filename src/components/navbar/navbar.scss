@@ -44,6 +44,7 @@
       @include variables.navigation-font;
       background-color: transparent;
       border: 1px solid variables.$text-color-active;
+      color: variables.$text-color-active;
       padding: 0.5rem 0.75rem;
       border-radius: 0.4rem;
       margin: 0 1.1rem;
