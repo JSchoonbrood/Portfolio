@@ -29,6 +29,7 @@
       @include variables.hero-font;
       letter-spacing: -0.04rem;
       text-align: center;
+      word-spacing: -1.2rem;
       &-span {
         color: variables.$text-color-active;
       }
