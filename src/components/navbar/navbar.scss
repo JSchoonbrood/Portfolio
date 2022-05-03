@@ -24,9 +24,7 @@
       width: 100%;
     }
     .link {
-      color: variables.$text-color-default;
-      font-weight: variables.$navigation-font-weight;
-      font-size: variables.$navigation-font-size;
+      @include variables.navigation-font;
       margin: 0 1.1rem;
       text-decoration: none;
       .icon {
@@ -48,11 +46,9 @@
       }
     }
     .resume-button {
+      @include variables.text-font;
       background-color: transparent;
       border: 1px solid variables.$text-color-active;
-      color: variables.$text-color-active;
-      font-size: variables.$navigation-font-size;
-      font-weight: variables.$navigation-font-weight;
       padding: 0.5rem 0.75rem;
       border-radius: 0.4rem;
       margin: 0 1.1rem;
@@ -70,15 +66,14 @@
     width: 100%;
     .navbar__expand {
       .menu {
+        @include variables.navigation-font;
         display: initial;
         position: absolute;
         top: 0;
         right: 0;
         margin: 1rem;
-        color: variables.$text-color-default;
         background-color: transparent;
         border: 0px;
-        font-size: variables.$navigation-font-size;
         z-index: 999;
       }
     }

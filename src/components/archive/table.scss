@@ -25,12 +25,10 @@
       height: 5vh;
       width: 30vw;
       td {
+        @include variables.navigation-font;
         display: inline-flex;
         width: 30%;
         padding: 1rem;
-        font-size: variables.$navigation-font-size;
-        font-weight: variables.$navigation-font-weight;
-        color: variables.$text-color-default;
       }
       td:nth-child(1) {
         width: 85%;
