@@ -8,21 +8,21 @@
 }
 
 @mixin title-font {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 4.8vw, 4.4rem);
   font-weight: 800;
   font-family: "JetBrains Mono";
   color: $text-color-default;
 }
 
 @mixin subtitle-font {
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 1.9vw, 2.2rem);
   font-weight: 650;
   font-family: "Inter";
   color: $text-color-default;
 }
 
 @mixin navigation-font {
-  font-size: 1.2rem;
+  font-size: clamp(1.25rem, 2vw, 1.3rem);
   font-weight: 500;
   font-family: "Inter"; 
   color: $text-color-default;
