@@ -39,14 +39,9 @@
       background-color: transparent;
       border: 0px;
       color: variables.$text-color-default;
-      h1 {
-        // align-items: center;
-        // justify-content: center;
-        // padding: 0.3rem;
-      }
     }
     .resume-button {
-      @include variables.text-font;
+      @include variables.navigation-font;
       background-color: transparent;
       border: 1px solid variables.$text-color-active;
       padding: 0.5rem 0.75rem;
@@ -85,10 +80,9 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      // margin: auto;
       .navbar__links_container {
         margin-top: 0.6rem;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0rem;
         display: none;
         justify-content: center;
         align-items: center;
