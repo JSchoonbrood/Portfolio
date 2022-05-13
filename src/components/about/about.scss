@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
   .about__desc {
     display: flex;
     flex-direction: row;
@@ -76,7 +77,6 @@
 }
 
 .about__education {
-  color: variables.$text-color-default;
 }
 
 .about__hobbies {
