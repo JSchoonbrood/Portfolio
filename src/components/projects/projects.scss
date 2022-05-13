@@ -40,6 +40,8 @@
         height: 100%;
         .image {
           transform: scale(1.4);
+          width: 100%;
+          height: 100%;
         }
       }
       &-desc {
@@ -76,7 +78,7 @@
       }
       &-desc {
         // width: 35vw;
-        height: 30vh;
+        height: fit-content;
         overflow-y: scroll;
         z-index: 1;
       }
@@ -115,14 +117,21 @@
 
     &-image {
       .image {
-        width: 100%;
-        height: 38vh;
+        // min-width: 65vw;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        border-radius: 5px;
       }
     }
     &-desc {
       @include variables.text-font;
+      // max-width: 100%;
+      width: auto;
+      height: fit-content;
       padding: 30px;
       background-color: variables.$accent-color;
+      border-radius: 5px;
     }
     &-tools {
       @include variables.navigation-font;
@@ -346,7 +355,7 @@
 
   @media (max-width: 1399.99px) {
     &__elements {
-      grid-template-columns: repeat(3, 30%);
+      grid-template-columns: repeat(2, 50%);
     }
   }
 }
