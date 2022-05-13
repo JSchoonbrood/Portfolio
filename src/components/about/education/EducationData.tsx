@@ -1,7 +1,9 @@
+import { default as uoy } from "../../../images/uoy.jpg";
+
 const EducationData = [
   {
     name: "University of York",
-    qualification: "Bachelors of Engineering",
+    qualification: "Bachelors of Engineering in Computer Science",
     grade: "First Class Honours (76%)",
     years: "2018-2021",
     desc: "",
@@ -10,7 +12,8 @@ const EducationData = [
       "Systems (89%)",
       "Final Year Project (79%)",
       "Workshop Assistant for York AI Society",
-    ]
+    ],
+    image: <img src={uoy}></img>
   },
   {
     name: "Queensbury Academy",

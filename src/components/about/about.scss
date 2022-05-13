@@ -76,7 +76,47 @@
   }
 }
 
-.about__education {
+.education {
+  color: variables.$text-color-default;
+  
+  &-block {
+    // outline: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 25vh;
+    width: 40vw;
+    margin: 0.2rem;
+    padding: 1rem;
+    background-color: variables.$darker;
+    border-radius: 5px;
+    list-style: none;
+    &-imagecontainer {
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    &-title {
+      @include variables.text-font;
+    }
+    &-years {
+      @include variables.text-font;
+    }
+    &-qualification {
+      @include variables.text-font;
+    }
+    &-grade {
+      @include variables.text-font;
+    }
+    &-desc {
+      @include variables.text-font;
+    }
+    &-list {
+      @include variables.text-font;
+      list-style: none;
+    }
+  }
 }
 
 .about__hobbies {
