@@ -11,7 +11,7 @@ const Education = () => {
               <div className="education-block-imagecontainer">
                 {image}
               </div>
-              <div className="education-block-con">
+              <div className="education-block-c">
                 <h1 className="education-block-title">{name}</h1>
                 <h1 className="education-block-qualification">{qualification}</h1>
                 {/* <h1 className="education-block-years">{years}</h1>  */}
