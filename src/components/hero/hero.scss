@@ -1,5 +1,18 @@
 @use "./../../variables";
 
+@mixin hero-buttons {
+  @include variables.navigation-font;
+  background-color: variables.$darkest;
+  border-radius: 5px;
+  padding: 1rem;
+  text-decoration: none;
+  color: variables.$text-color-default;
+  margin: 0.3rem;
+  margin-top: 1rem;
+  width: 8rem;
+  text-align: center;
+}
+
 .hero {
   display: flex;
   flex-direction: row;
@@ -10,24 +23,37 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 12vh;
     width: 100%;
     &-title {
-      font-size: variables.$hero-font-size;
-      font-weight: variables.$hero-font-weight;
-      color: variables.$text-color-default;
+      @include variables.hero-font;
       letter-spacing: -0.04rem;
+      text-align: center;
+      word-spacing: -1.2rem;
       &-span {
         color: variables.$text-color-active;
       }
     }
     &-bio {
-      font-size: variables.$text-font-size;
-      font-weight: variables.$text-font-weight;
-      color: variables.$text-color-default;
+      @include variables.text-font;
+      text-align: center;
+      
+    }
+    &-buttons {
+      display: flex;
+      justify-content: center;
+      &-project {
+        @include hero-buttons;
+        background-color: variables.$primary-bright;
+      }
+      &-github {
+        @include hero-buttons;
+      }
     }
   }
   &__image {
-    display: flex;
+    display: None;
+    // display: flex;
     justify-content: flex-end;
     align-items: center;
     img {
@@ -44,12 +70,26 @@
     &__content {
       align-items: center;
       justify-content: center;
+      position: relative;
+      bottom: 4vh;
+      margin-bottom: 0;
       &-title {
         display: inline-block;
       }
       &-bio {
         text-align: center;
-        margin: 1rem;
+        margin: 0
+        // margin-top: 2.4rem;
+      }
+      &-buttons {
+        display: flex;
+        &-project {
+          @include hero-buttons;
+          background-color: variables.$primary-bright;
+        }
+        &-github {
+          @include hero-buttons;
+        }
       }
     }
     &__image {
@@ -63,13 +103,17 @@
 }
 
 .Typewriter__wrapper {
-  font-size: variables.$subtitle-font-size;
-  color: variables.$text-color-active;
+  display: None;
+  @include variables.subtitle-font;
+  position: relative;
+  top: 1rem;
 }
 
 .Typewriter__cursor {
-  font-size: variables.$subtitle-font-size;
-  color: variables.$text-color-active;
+  display: None;
+  @include variables.subtitle-font;
+  position: relative;
+  top: 0.9rem;
 }
 
 .waving-hand:hover {

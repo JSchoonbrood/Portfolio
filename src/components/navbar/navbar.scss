@@ -4,10 +4,9 @@
 .navbar {
   height: auto;
   z-index: 999;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  background-color: variables.$accent-color-nav;
-  width: 100%;
+  margin-top: 0.6rem;
+  width: 85%;
+  // background-color: vriables.$accent-color-nav;
   .navbar__expand {
     .menu {
       display: none;
@@ -15,7 +14,7 @@
   }
   .navbar__links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     .navbar__links_container {
       display: flex;
       justify-content: flex-end;
@@ -24,9 +23,7 @@
       width: 100%;
     }
     .link {
-      color: variables.$text-color-default;
-      font-weight: variables.$navigation-font-weight;
-      font-size: variables.$navigation-font-size;
+      @include variables.navigation-font;
       margin: 0 1.1rem;
       text-decoration: none;
       .icon {
@@ -37,25 +34,16 @@
       color: variables.$text-color-active;
     }
     .reload-button {
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: 1rem;
+      padding: 0.4rem;
       background-color: transparent;
       border: 0px;
       color: variables.$text-color-default;
-      h1 {
-        // align-items: center;
-        // justify-content: center;
-        // padding: 0.3rem;
-      }
     }
     .resume-button {
+      @include variables.navigation-font;
       background-color: transparent;
       border: 1px solid variables.$text-color-active;
       color: variables.$text-color-active;
-      font-size: variables.$navigation-font-size;
-      font-weight: variables.$navigation-font-weight;
       padding: 0.5rem 0.75rem;
       border-radius: 0.4rem;
       margin: 0 1.1rem;
@@ -68,19 +56,20 @@
   .navbar {
     padding-top: 0rem;
     padding-bottom: 0rem;
+    margin-top: 0;
     height: 6vh;
     background-color: transparent;
+    width: 100%;
     .navbar__expand {
       .menu {
-        display: block;
+        @include variables.navigation-font;
+        display: initial;
         position: absolute;
         top: 0;
         right: 0;
         margin: 1rem;
-        color: variables.$text-color-default;
         background-color: transparent;
         border: 0px;
-        font-size: variables.$navigation-font-size;
         z-index: 999;
       }
     }
@@ -92,10 +81,9 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      // margin: auto;
       .navbar__links_container {
         margin-top: 0.6rem;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.4rem;
         display: none;
         justify-content: center;
         align-items: center;
@@ -123,7 +111,7 @@
       .active-nav {
         display: flex;
         flex-direction: column;
-        height: 23vh;
+        height: 26vh;
       }
       .reload-button {
         position: absolute;

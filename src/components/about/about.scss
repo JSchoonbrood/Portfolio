@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
   .about__desc {
     display: flex;
     flex-direction: row;
@@ -23,13 +24,13 @@
       justify-content: center;
 
       button {
+        @include variables.text-font;
         margin: 0 0.5rem;
         width: 10rem;
         padding: 0.7rem;
         margin-bottom: 0rem;
         background-color: transparent;
         border: 0px;
-        font-size: variables.$text-font-size;
         color: variables.$text-color-default;
         border-bottom: 0.15rem solid;
       }
@@ -57,8 +58,7 @@
 
   .about__skills {
     p {
-      color: variables.$text-color-default;
-      font-size: variables.$subtitle-font-size;
+      @include variables.subtitle-font;
       display: flex;
       justify-content: center;
     }
@@ -76,8 +76,47 @@
   }
 }
 
-.about__education {
+.education {
   color: variables.$text-color-default;
+  
+  &-block {
+    // outline: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 25vh;
+    width: 40vw;
+    margin: 0.2rem;
+    padding: 1rem;
+    background-color: variables.$darker;
+    border-radius: 5px;
+    list-style: none;
+    &-imagecontainer {
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    &-title {
+      @include variables.text-font;
+    }
+    &-years {
+      @include variables.text-font;
+    }
+    &-qualification {
+      @include variables.text-font;
+    }
+    &-grade {
+      @include variables.text-font;
+    }
+    &-desc {
+      @include variables.text-font;
+    }
+    &-list {
+      @include variables.text-font;
+      list-style: none;
+    }
+  }
 }
 
 .about__hobbies {

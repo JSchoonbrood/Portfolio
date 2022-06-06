@@ -1,36 +1,42 @@
 @use "./../../variables";
 
 .archive {
+  height: 5vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .table {
   width: 60vw;
   cursor: default;
+  margin-top: 1rem;
+  overflow: hidden; /* Stops content overflowing and overlapping rounded corners */
   border-collapse: collapse;
+  border-radius: 10px;
   @media (max-width: 575.98px), (max-width: 767.98px) {
     width: 95vw;
   }
   &__body {
-    background-color: variables.$accent-color;
+    background-color: variables.$darkest;
     &-row {
       height: 5vh;
       width: 30vw;
       td {
+        @include variables.navigation-font;
         display: inline-flex;
-        width: 15%;
-        justify-content: center;
+        width: 30%;
         padding: 1rem;
-        font-size: variables.$navigation-font-size;
-        font-weight: variables.$navigation-font-weight;
-        color: variables.$text-color-default;
+      }
+      td:nth-child(1) {
+        width: 85%;
+        justify-content: flex-start;
       }
       td:nth-child(2) {
-        width: 70%;
+        width: 15%;
+        justify-content: flex-end;
       }
     }
     &-row:hover {
@@ -38,19 +44,22 @@
         color: variables.$text-color-active;
       }
     }
+    &-link {
+      text-decoration: none;
+      color: variables.$text-color-default;
+      width: 100%;
+      &:hover {
+        color: variables.$text-color-active;
+      }
+    }
   }
 }
 
 .expanded {
-  background-color: variables.$text-color-default;
+  background-color: variables.$darker;
   td {
-    color: variables.$text-color-active;
+    color: variables.$text-color-default;
   }
-}
-
-.link {
-  text-decoration: none;
-  color: variables.$text-color-active;
 }
 
 .noselect {

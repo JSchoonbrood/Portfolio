@@ -1,23 +1,35 @@
 import React from "react";
+import EducationData from "./EducationData";
 
 const Education = () => {
   return (
-    <div className="about__education">
-      <div className="about__education-block">
-        <div className="about__education-block-content">
-          <h3>2019-2021</h3>
-          <h4>University Of York</h4>
-          <p>Graduated with First Class Honours in Computer Science (BEng). </p>
-        </div>
-      </div>
-
-      <div className="about__education-block">
-        <div className="about__education-block-content">
-          <h3>2017-2019</h3>
-          <h4>Queensbury Academy - ALevels</h4>
-          <p></p>
-        </div>
-      </div>
+    <div className="education">
+      <ul>
+        {EducationData.map(({ name, qualification, grade, years, desc, notableAchievements, image }) => {
+          return (
+            <li className="education-block">
+              <div className="education-block-imagecontainer">
+                {image}
+              </div>
+              <div className="education-block-c">
+                <h1 className="education-block-title">{name}</h1>
+                <h1 className="education-block-qualification">{qualification}</h1>
+                {/* <h1 className="education-block-years">{years}</h1>  */}
+                <h2 className="education-block-grade">{grade}</h2>
+                <p className="education-block-desc">{desc}</p>
+                <ul className="education-block-list">
+                  {notableAchievements.map((value) => {
+                    return (
+                      <li>{value}</li>
+                    )
+                  })}
+                </ul>
+              </div>
+              
+            </li>
+          )
+        })}
+      </ul>
     </div>
   );
 };
