@@ -13,7 +13,7 @@ const EducationData = [
       "Final Year Project (79%)",
       "Workshop Assistant for York AI Society",
     ],
-    image: <img src={uoy}></img>
+    image: <img src={uoy} alt="University of York Crest"></img>
   },
   {
     name: "Queensbury Academy",
