@@ -22,8 +22,8 @@
   &__content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 20vh;
+    justify-content: center;
+    margin-bottom: 12vh;
     width: 100%;
     &-title {
       @include variables.hero-font;
@@ -72,7 +72,7 @@
       justify-content: center;
       position: relative;
       bottom: 4vh;
-      margin-top: 0;
+      margin-bottom: 0;
       &-title {
         display: inline-block;
       }
