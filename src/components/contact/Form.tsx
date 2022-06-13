@@ -1,93 +1,118 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
+import { useForm, useWatch } from "react-hook-form";
 
 const Form = () => {
-	const [inputField, setInputField] = useState({
-		contact_name: "",
-		email: "",
-		message: "",
-	});
+	const {
+		register,
+		handleSubmit,
+		reset,
+		control,
+		formState: { errors, isSubmitSuccessful, isSubmitting },
+	} = useForm({ mode: "onTouched", });
 
-	const [emailValid, setValidity] = useState(true);
+	const [isSuccess, setIsSuccess] = useState(false);
+	const [Message, setMessage] = useState("");
 
-	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const target = event.target;
-		const value = target.value;
-		const name = target.name;
+	const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
-    setInputField({...inputField, [name]: value,});
-	};
-
-	const handleMessageChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-		const target = event.target;
-		const value = target.value;
-		const name = target.name;
-
-    setInputField({...inputField, [name]: value,});
-	};
-
-	const validateEmail = (email: string) => {
-		return (
-			email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) //eslint-disable-line
-		);
-	}
-
-	const submitChange = () => {
-		if (validateEmail(inputField.email)) {
-			setValidity(true);
-			alert("True");
-		} else {
-			setValidity(false);
-			alert("False");
-		}
-		
+	const onSubmit = async (data: any, e: any) => {
+		console.log(data);
+		await fetch("https://api.web3forms.com/submit", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+			},
+			body: JSON.stringify(data, null, 2),
+		})
+			.then(async (response) => {
+				let json = await response.json();
+				if (json.success) {
+					setIsSuccess(true);
+					setMessage(json.message);
+					e.target.reset();
+					reset();
+				} else {
+					setIsSuccess(false);
+					setMessage(json.message);
+				}
+			})
+			.catch((error) => {
+				setIsSuccess(false);
+				setMessage("Client Error. Please check the console.log for more info");
+				console.log(error);
+			});
 	};
 
 	return (
-		<div className="container__form">
-			<form className="form">
-				<label className="form__name">
-					Name:
-					<br />
-					<input className="form__name-input"
-						name="contact_name"
-						type="string"
-						value={inputField.contact_name}
-						onChange={handleChange}
-						placeholder="Name"
-						required
-					/>
-				</label>
-				<br />
-				<label className="form__email">
-					<div className="form__email-title">
-						Email: 
-						<span className="form__email-title-error">{emailValid ? "" : "Invalid Email, Please Try Again"}</span>
-					</div>
-					<br />
-					<input className="form__email-input"
-						name="email"
-						type="string"
-						value={inputField.email}
-						onChange={handleChange}
-						placeholder="Email"
-						required
-					/>
-				</label>
-				<br />
-				<label className="form__message">
-					Message: 
-					<br />
-					<textarea className="form__message-input"
-						name="message"
-						value={inputField.message}
-						onChange={handleMessageChange}
-						placeholder="Message"
-						required></textarea>
-				</label>
-				<input type="submit" value="Submit" onClick={submitChange} className="form__submit" />
-			</form>
-		</div>
+		<>
+			<div className="container__form">
+				{!isSubmitSuccessful && (
+					<form onSubmit={handleSubmit(onSubmit)}>
+						<input
+							type="hidden"
+							value="7b62b99b-0275-4eeb-9e16-b311e7d827c2"
+							{...register("access_key")}
+						/>
+						<input
+							type="hidden"
+							value={`${userName} sent a message`}
+							{...register("subject")}
+						/>
+						<input
+							type="hidden"
+							{...register("from_name")}
+						/>
+						<input
+							type="checkbox"
+							id=""
+							className="hidden"
+							{...register("botcheck")}></input>
+						<div className="form">
+							<input
+								type="text"
+								placeholder="Full Name"
+								autoComplete="false"
+								className="form__name-input"
+								{...register("name", {
+									required: "Full name is required",
+									maxLength: 90,
+								})} />
+
+							<input
+								id="email"
+								type="email"
+								placeholder="Email Address"
+								// name="email"
+								autoComplete="false"
+								className="form__email-input"
+								{...register("email", {
+									required: "Enter your email",
+									pattern: {
+										value: /^\S+@\S+$/i,
+										message: "Please enter a valid email",
+									},
+								})}
+							/>
+							<textarea
+								// name="message"
+								placeholder="Your Message"
+								className="form__message-input"
+								{...register("message", { required: "Enter yopur Message" })} />
+						</div>
+						<button type="submit" className="form__submit-button">
+							{isSubmitting ? "Sending..." : "Send"}
+						</button>
+					</form>
+				)}
+				{isSubmitSuccessful && isSuccess && (
+					<>
+						<h1>Thank you for your message!</h1>
+					</>
+				)}
+			</div>
+		</>
 	);
-};
+}
 
 export default Form;
