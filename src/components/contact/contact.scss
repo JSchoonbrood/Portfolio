@@ -2,71 +2,91 @@
 
 .page {
   display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   .container__form {
-    height: 100%;
-		width: 35%;
-    align-items: stretch;
-    background-color: white;
+    @include variables.text-master-font;
+    max-width: 100%;
+    width: 400px;
+    background-color: variables.$darker;
+    padding: 2rem;
+    border-radius: 10px;
   }
 }
 
 @mixin input_container {
-	@include variables.text-font;
-	width: 100%;
-	background-color: variables.$accent-color;
-	border: 1px solid variables.$accent-color;
-	border-radius: 5px;
-	height: 2.2rem;
-	margin-top: 0.7rem;
-	padding: 0.5rem;
+  @include variables.text-font;
+  background-color: variables.$text-white;
+  border: 1px solid variables.$text-white;
+  color: black;
+  border-radius: 5px;
+  height: 2.2rem;
+  margin-top: 0.4rem;
+  padding: 0.5rem;
 }
 
 .form {
-	@include variables.text-font;
   display: flex;
   flex-direction: column;
-	&__email {
-		display: flex;
-		flex-direction: column;
-		margin: 1rem;
-		&-input {
-			@include input_container();
-		}
-		&-title {
-			display: flex;
-			justify-content: space-between;
-			&-error {
-				color: red;
-			}
-		}
-	}
-	
-	&__message {
-		display: flex;
-		flex-direction: column;
-		margin: 1rem;
-		&-input {
-			@include variables.text-font;
-			@include input_container();
-			height: 9rem;
-			resize: vertical;
-			text-align: start;
-		}
-	}
-	
-	&__name {
-		display: flex;
-		flex-direction: column;
-		margin: 1rem;
-		&-input {
-			@include input_container();
-		}
-	}
+  width: 100%;
+  &__email {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem;
+    &-input {
+      @include input_container();
+    }
 
-	&__submit {
-		margin: 1rem;
-	}
+    &-title {
+      @include variables.text-font;
+      display: flex;
+      justify-content: space-between;
+      &-error {
+        color: red;
+      }
+    }
+  }
+
+  &__message {
+    @include variables.text-font;
+    display: flex;
+    flex-direction: column;
+    margin: 0rem;
+    &-input {
+      @include variables.text-font;
+      @include input_container();
+      height: 9rem;
+      width: 100%;
+      resize: vertical;
+      text-align: start;
+    }
+  }
+
+  &__name {
+    @include variables.text-font;
+    display: flex;
+    flex-direction: column;
+    margin: 0rem;
+    color: white;
+    &-input {
+      @include input_container();
+    }
+  }
+
+  &__submit-button {
+    @include variables.text-font;
+    // display: flex;
+    background-color: variables.$primary-dark;
+    border: 0px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+		margin-top: 1.5rem;
+		border-radius: 5px;
+    width: 100%;
+  }
+}
+
+.hidden {
+	display: none;
 }
