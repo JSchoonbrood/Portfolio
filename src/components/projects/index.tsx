@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 const Projects = () => {
   return (
-    <div className="page">
+    <div className="projects">
       <FeaturedProjects />
       <AdditionalProjects />
       <div>
