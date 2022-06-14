@@ -34,7 +34,8 @@ const About = () => {
       <div className="about__desc">
         <div className="about__desc-img-container"></div>
         <div className="about__desc-bio">
-          <h1>Driven software engineer looking for new opportunities</h1>
+          <h1></h1>
+          <p></p>
         </div>
       </div>
 
