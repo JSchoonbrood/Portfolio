@@ -95,6 +95,8 @@
   }
   &__desc {
     @include variables.text-font;
+    color: variables.$primary-bright;
+    cursor: pointer;
     margin-bottom: 1rem;
   }
 }

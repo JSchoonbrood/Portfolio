@@ -8,7 +8,7 @@ const Details = () => {
         <li className="cont-details__item">
           <FaEnvelope className="cont-details__icon" />
           <h1 className="cont-details__title">Email</h1>
-          <p className="cont-details__desc">schoonbrood.jake@gmail.com</p>
+          <p className="cont-details__desc" onClick={() => {navigator.clipboard.writeText("schoonbrood.jake@gmail.com")}}>schoonbrood.jake@gmail.com</p>
         </li>
         <li className="cont-details__item">
           <FaGithub className="cont-details__icon" />
