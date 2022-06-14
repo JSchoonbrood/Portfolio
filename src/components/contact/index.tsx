@@ -1,11 +1,13 @@
 import React from "react";
-import Form from "./Form";
+import Form from "./form/Form";
+import Details from "./details/Details";
 import "./contact.scss";
 
 const Contact = () => {
 	return ( 
-    <div className="page">
+    <div className="contacts">
       <Form />
+      <Details />
     </div>
   );
 };
