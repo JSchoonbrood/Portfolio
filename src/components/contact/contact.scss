@@ -1,89 +1,101 @@
 @use "./../../variables";
 
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  .container__form {
-    @include variables.text-master-font;
-    max-width: 100%;
-    width: 400px;
-    background-color: variables.$darker;
-    padding: 2rem;
-    border-radius: 10px;
-  }
-}
-
 @mixin input_container {
   @include variables.text-font;
   background-color: variables.$text-white;
   border: 1px solid variables.$text-white;
   color: black;
   border-radius: 5px;
-  height: 2.2rem;
+  height: 3rem;
   margin-top: 0.4rem;
   padding: 0.5rem;
 }
 
-.form {
+.contacts {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  &__email {
-    display: flex;
-    flex-direction: column;
-    margin: 0rem;
-    &-input {
-      @include input_container();
-    }
-
-    &-title {
-      @include variables.text-font;
-      display: flex;
-      justify-content: space-between;
-      &-error {
-        color: red;
-      }
-    }
+  .cont-form {
+    @include variables.text-master-font;
+    background-color: variables.$darker;
+    padding: 2rem;
+    border-radius: 10px;
   }
+  .cont-details {
+    @include variables.text-master-font;
+  }
+}
 
-  &__message {
-    @include variables.text-font;
+.cont-form {
+  &__form {
     display: flex;
     flex-direction: column;
-    margin: 0rem;
-    &-input {
-      @include variables.text-font;
+    width: 450px;
+    height: 21.5rem;
+  }
+  &__name {
+    @include input_container();
+  }
+  &__email {
+    @include input_container();
+  }
+  &__message {
+    @include input_container();
+    @include variables.text-font;
       @include input_container();
-      height: 9rem;
+      height: 17rem;
       width: 100%;
       resize: vertical;
       text-align: start;
-    }
   }
-
-  &__name {
+  &__submit-btn {
     @include variables.text-font;
     display: flex;
-    flex-direction: column;
-    margin: 0rem;
-    color: white;
-    &-input {
-      @include input_container();
-    }
-  }
-
-  &__submit-button {
-    @include variables.text-font;
-    // display: flex;
-    background-color: variables.$primary-dark;
-    border: 0px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-		margin-top: 1.5rem;
-		border-radius: 5px;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    border: 0px;
+    background-color: variables.$primary-dark;
+    padding-top: 1rem;
+    margin: auto;
+    margin-top: 0.4rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.cont-details {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: variables.$darker;
+    margin: 1rem;
+    width: 260px;
+    height: 160px;
+    border-radius: 10px;
+  }
+  &__icon {
+    color: variables.$primary-bright;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem;
+  }
+  &__title {
+    @include variables.emphasised-font;
+    margin-bottom: 1rem;
+  }
+  &__link {
+    @include variables.text-font;
+    color: variables.$primary-bright;
+    text-decoration: none;
+    margin-bottom: 1rem;
+  }
+  &__desc {
+    @include variables.text-font;
+    margin-bottom: 1rem;
   }
 }
 
