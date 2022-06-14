@@ -1,4 +1,5 @@
 import { default as uoy } from "../../../images/uoy.jpg";
+import { default as qa } from "../../../images/qa.jpg";
 
 const EducationData = [
   {
@@ -24,7 +25,8 @@ const EducationData = [
     notableAchievements: [
       "Self-taught Computer Science for two years due to shortage of faculty",
       "Travelled between two schools to study Maths & Physics"
-    ]
+    ],
+    image: <img src={qa} alt="Queensbury Academy Crest"></img>
   },
 ];
 
