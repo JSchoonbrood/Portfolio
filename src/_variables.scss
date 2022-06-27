@@ -54,8 +54,17 @@
   color: $text-color-default;
 }
 
+@mixin text-master-font {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 400;
+  font-family: "Inter";
+  text-decoration: none;
+  list-style: none;
+  color: $text-color-default;
+}
+
 @mixin text-font {
-  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
   font-weight: 400;
   font-family: "Inter";
   text-decoration: none;
