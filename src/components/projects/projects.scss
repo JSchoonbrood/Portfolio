@@ -349,27 +349,27 @@
   background-color: green;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
+// .tooltip {
+//   position: relative;
+//   display: inline-block;
+//   border-bottom: 1px dotted black;
+// }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 10rem;
-  bottom: 1.5rem;
-  left: 50%;
-  margin-left: -5rem; // Half the width to center tooltip
-  background-color: variables.$accent-color;
-  color: variables.$text-color-default;
-  text-align: center;
-  padding: 5px;
-  border-radius: 5px;
-  position: absolute;
-  z-index: 1;
-}
+// .tooltip .tooltiptext {
+//   visibility: hidden;
+//   width: 10rem;
+//   bottom: 1.5rem;
+//   left: 50%;
+//   margin-left: -5rem; // Half the width to center tooltip
+//   background-color: variables.$accent-color;
+//   color: variables.$text-color-default;
+//   text-align: center;
+//   padding: 5px;
+//   border-radius: 5px;
+//   position: absolute;
+//   z-index: 1;
+// }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
+// .tooltip:hover .tooltiptext {
+//   visibility: visible;
+// }
