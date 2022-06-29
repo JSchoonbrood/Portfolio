@@ -21,10 +21,14 @@ function App() {
             className={"layout__container-components" + (focusState ? " blur" : "")}
           >
             <Routes>
-              <Route path="/" element={<Hero />} />
-              <Route path="about" element={<About />} />
-              <Route path="projects" element={<Projects />} />
-              <Route path="contact" element={<Contact />} />
+              <Route path="/" element={
+                <div className={"layout__container-components-home"}>
+                  <Hero />
+                  <Projects />
+                  <About />
+                  <Contact />
+                </div>
+              } />
               <Route path="archive" element={<Archive />} />
             </Routes>
           </div>
