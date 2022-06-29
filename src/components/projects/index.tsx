@@ -9,9 +9,6 @@ const Projects = () => {
     <div className="projects">
       <FeaturedProjects />
       <AdditionalProjects />
-      <div>
-        <NavLink to="/archive"><h1 className="archive-title">View The Archive</h1></NavLink>
-      </div>
     </div>
   );
 };
