@@ -1,11 +1,11 @@
 @use "./../../variables";
 
+
 .about {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
   .about__desc {
     display: flex;
     flex-direction: row;
@@ -20,7 +20,7 @@
     .about__sections {
       z-index: 998;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
 
       button {
@@ -32,6 +32,9 @@
         border: 0px;
         color: variables.$text-color-default;
         border-bottom: 0.15rem solid;
+      }
+      .icons {
+        height: 25px;
       }
 
       button:hover {
@@ -82,12 +85,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 1000px;
+    max-width: 860px;
     padding: 1rem;
     margin: 1rem;
     background-color: variables.$darker;
     border-radius: 5px;
     list-style: none;
+    box-shadow: 0px 3px variables.$darkest;
     &-imagecontainer {
       width: 25%;
       max-width: 25%;
