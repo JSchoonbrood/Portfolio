@@ -193,7 +193,7 @@
     @include project-right;
   }
   .featured {
-    max-width: 1200px;
+    max-width: 1100px;
   }
   .other {
     max-width: 1200px;
@@ -211,6 +211,7 @@
       grid-template-columns: repeat(9, 10%);
       grid-template-rows: 1fr;
       overflow: hidden;
+      margin-bottom: 6rem;
     }
   }
 }
@@ -234,7 +235,7 @@
     position: relative;
     bottom: 0;
     cursor: pointer;
-    margin: 1rem;
+    margin: 0.4rem;
     padding: 0.5rem;
     border-radius: 10px;
     background-color: variables.$accent-color;
@@ -321,6 +322,12 @@
 
 .archive-title {
   @include title();
+  margin: 1rem;
+  margin-bottom: 2rem;
+  h1 {
+    @include variables.text-font;
+    color: variables.$primary-bright;
+  }
 }
 
 .projects {
