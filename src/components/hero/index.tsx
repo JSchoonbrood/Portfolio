@@ -2,9 +2,7 @@ import React from "react";
 import "./hero.scss";
 import { default as hero_img } from "../../images/hero_dev.svg";
 import Desc from "./type";
-import {
-  Link,
-} from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -19,15 +17,16 @@ const Hero = () => {
           I'm an enthusiastic software engineer who enjoys solving problems.
         </p>
         <div className="hero__content-buttons">
-          <Link                                                                                                                                                                                                                                    
+          <ScrollLink
             activeClass="active"
             to="projects"
             spy={true}
             smooth={true}
+            offset={-60}
             className="hero__content-buttons-project"
           >
             Projects
-          </Link>
+          </ScrollLink>
           <a
             href="https://github.com/JSchoonbrood"
             className="hero__content-buttons-github"
@@ -39,7 +38,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hero__image" id="projects">
+      <div className="hero__image">
         <img src={hero_img} alt="Clipart Developer" />
       </div>
 
