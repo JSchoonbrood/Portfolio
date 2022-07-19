@@ -17,7 +17,8 @@
   .layout {
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    // overflow: auto;
+    height: 500vh;
     width: 100%;
     &__navbar {
       width: 100%;
