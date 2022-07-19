@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Routes, Route } from "react-router-dom";
 import { About, Hero, Navbar, Projects, Sidebar, Contact, Archive} from "./components";
 import { useAppSelector } from "./data/hooks";
@@ -22,12 +22,12 @@ function App() {
           >
             <Routes>
               <Route path="/" element={
-                <div className={"layout__container-components-home"}>
+                <Fragment>
                   <Hero />
                   <Projects />
                   <About />
                   <Contact />
-                </div>
+                </Fragment>
               } />
               <Route path="archive" element={<Archive />} />
             </Routes>
