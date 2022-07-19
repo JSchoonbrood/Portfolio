@@ -9,6 +9,7 @@ import { MdOutlineMonitor } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../data/hooks";
 import { setFocus } from "../../data/slices/focusSlice";
+import { Link as ScrollLink } from "react-scroll";
 import "./navbar.scss";
 
 const Navbar = () => {
@@ -55,38 +56,54 @@ const Navbar = () => {
               : "navbar__links_container"
           }
         >
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "active link" : "link")}
+          <ScrollLink
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-60}
+            className="link"
             onClick={navbarControl}
           >
             <AiOutlineHome className="icon" />
             Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? "active link" : "link")}
+          </ScrollLink>
+          <ScrollLink
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-60}
+            className="link"
             onClick={navbarControl}
           >
             <AiOutlineUser className="icon" />
             About
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) => (isActive ? "active link" : "link")}
+          </ScrollLink>
+          <ScrollLink
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-60}
+            className="link"
             onClick={navbarControl}
           >
             <MdOutlineMonitor className="icon" />
             Projects
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) => (isActive ? "active link" : "link")}
+          </ScrollLink>
+          <ScrollLink
+            activeClass="active"
+            to="contacts"
+            spy={true}
+            smooth={true}
+            offset={-60}
+            className="link"
             onClick={navbarControl}
           >
             <AiOutlineContacts className="icon" />
             Contact
-          </NavLink>
+          </ScrollLink>
           <button className="resume-button">Resume</button>
         </nav>
       </div>
