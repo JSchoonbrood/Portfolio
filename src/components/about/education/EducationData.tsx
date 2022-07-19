@@ -23,8 +23,6 @@ const EducationData = [
     years: "2016-2018",
     desc: "ABB - Computer Science, Mathematics, Physics",
     notableAchievements: [
-      "Self-taught Computer Science for two years due to shortage of faculty",
-      "Travelled between two schools to study Maths & Physics"
     ],
     image: <img src={qa} alt="Queensbury Academy Crest"></img>
   },
