@@ -24,7 +24,8 @@ const Navbar = () => {
   });
 
   const navbarControl = () => {
-    if (window.innerWidth < 767.98) { // Only activate for mobile / small devices view
+    if (window.innerWidth < 767.98) {
+      // Only activate for mobile / small devices view
       if (focusState === true) {
         dispatch(setFocus(false));
       } else {
