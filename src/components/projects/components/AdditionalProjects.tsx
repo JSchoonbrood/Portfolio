@@ -1,10 +1,14 @@
 import React from 'react'
 import projects from "./ProjectData";
+import { NavLink } from "react-router-dom";
 
 const AdditionalProjects = () => {
   return (
     <div className="other">
         <h1 className="other-title">Additional Projects</h1>
+        <div>
+        <NavLink to="/archive" className="archive-title"><h1>View The Archive</h1></NavLink>
+        </div>
         <ul className="other__elements">
           {projects
             .filter(({ featured }) => !featured)
