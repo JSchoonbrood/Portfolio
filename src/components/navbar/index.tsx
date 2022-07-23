@@ -6,10 +6,10 @@ import {
 } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineMonitor } from "react-icons/md";
-import { NavLink } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../data/hooks";
 import { setFocus } from "../../data/slices/focusSlice";
-import { Link as ScrollLink } from "react-scroll";
+import { NavHashLink } from 'react-router-hash-link';
+import scrollOffset from './scrollOffset';
 import "./navbar.scss";
 
 const Navbar = () => {
@@ -56,54 +56,46 @@ const Navbar = () => {
               : "navbar__links_container"
           }
         >
-          <ScrollLink
-            activeClass="active"
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={-60}
+          <NavHashLink
+            to="/"
+            smooth
             className="link"
             onClick={navbarControl}
+            scroll={elem => scrollOffset(elem)}
           >
             <AiOutlineHome className="icon" />
             Home
-          </ScrollLink>
-          <ScrollLink
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-60}
+          </NavHashLink>
+          <NavHashLink
+            to="/#about"
+            smooth
             className="link"
             onClick={navbarControl}
+            scroll={elem => scrollOffset(elem)}
           >
             <AiOutlineUser className="icon" />
             About
-          </ScrollLink>
-          <ScrollLink
-            activeClass="active"
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-60}
+          </NavHashLink>
+          <NavHashLink
+            to="/#projects"
+            smooth
             className="link"
             onClick={navbarControl}
+            scroll={elem => scrollOffset(elem)}
           >
             <MdOutlineMonitor className="icon" />
             Projects
-          </ScrollLink>
-          <ScrollLink
-            activeClass="active"
-            to="contacts"
-            spy={true}
+          </NavHashLink>
+          <NavHashLink
+            to="/#contacts"
             smooth={true}
-            offset={-60}
             className="link"
             onClick={navbarControl}
+            scroll={elem => scrollOffset(elem)}
           >
             <AiOutlineContacts className="icon" />
             Contact
-          </ScrollLink>
+          </NavHashLink>
           <button className="resume-button">Resume</button>
         </nav>
       </div>
