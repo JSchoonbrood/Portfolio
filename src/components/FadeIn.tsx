@@ -5,18 +5,25 @@ const FadeIn = (props: any) => {
   const domRef: any = React.useRef();
 
   React.useEffect(() => {
-    const observer = new IntersectionObserver(entry => {
-      if (entry[0].isIntersecting) {
+    const callbackFunction = (entries: any) => {
+      if (entries[0].isIntersecting) {
         setIsVisible(true);
-
-        observer.unobserve(domRef.current);
       }
-    });
+    };
 
-    observer.observe(domRef.current);
+    let observerRefValue: any = null;
 
-    return () => observer.unobserve(domRef.current);
-  }, []);
+    const observer = new IntersectionObserver(callbackFunction);
+
+    if (domRef.current) {
+      observer.observe(domRef.current);
+      observerRefValue = observer.observe(domRef.current);
+
+    }
+
+    return () => {
+      if (observerRefValue) observer.unobserve(observerRefValue);
+    }});
 
   return (
     <div className={`fade-in ${isVisible ? 'fade-in-visible' : ''}`} ref={domRef}>
