@@ -8,7 +8,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineMonitor } from "react-icons/md";
 import { useAppDispatch, useAppSelector } from "../../data/hooks";
 import { setFocus } from "../../data/slices/focusSlice";
-import { NavHashLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import scrollOffset from './scrollOffset';
 import "./navbar.scss";
 
@@ -56,7 +56,7 @@ const Navbar = () => {
               : "navbar__links_container"
           }
         >
-          <NavHashLink
+          <HashLink
             to="/"
             smooth
             className="link"
@@ -65,19 +65,10 @@ const Navbar = () => {
           >
             <AiOutlineHome className="icon" />
             Home
-          </NavHashLink>
-          <NavHashLink
-            to="/#about"
-            smooth
-            className="link"
-            onClick={navbarControl}
-            scroll={elem => scrollOffset(elem)}
-          >
-            <AiOutlineUser className="icon" />
-            About
-          </NavHashLink>
-          <NavHashLink
-            to="/#projects"
+          </HashLink>
+          <HashLink
+            to="/"
+            elementId="projects"
             smooth
             className="link"
             onClick={navbarControl}
@@ -85,17 +76,29 @@ const Navbar = () => {
           >
             <MdOutlineMonitor className="icon" />
             Projects
-          </NavHashLink>
-          <NavHashLink
-            to="/#contacts"
-            smooth={true}
+          </HashLink>
+          <HashLink
+            to="/"
+            elementId="about"
+            smooth
+            className="link"
+            onClick={navbarControl}
+            scroll={elem => scrollOffset(elem)}
+          >
+            <AiOutlineUser className="icon" />
+            About
+          </HashLink>
+          <HashLink
+            to="/"
+            elementId="contacts"
+            smooth
             className="link"
             onClick={navbarControl}
             scroll={elem => scrollOffset(elem)}
           >
             <AiOutlineContacts className="icon" />
             Contact
-          </NavHashLink>
+          </HashLink>
           <button className="resume-button">Resume</button>
         </nav>
       </div>
