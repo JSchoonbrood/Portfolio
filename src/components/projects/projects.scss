@@ -1,77 +1,77 @@
 @use "./../../variables";
 
 @mixin featured-mobile {
-    .flex-column {
-      display: flex;
-      flex-direction: column;
-      margin-top: auto;
-      margin-bottom: auto;
-      padding: 1.5rem;
-      grid-area: 1 / 1 / 1 / 11;
-      z-index: 3;
-    }
-    .featured {
-      width: 100%;
-      &__elements {
-        &-items {
-          margin: 1rem;
-          border-radius: 5px;
-          height: 35vh;
-          width: 90vw;
-        }
-        &-title {
-          @include variables.emphasised-font;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-        }
-        &-image-filter {
-          grid-area: 1 / 1 / 1 / 11;
-          background-color: variables.$accent-color-opacity;
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 1.5rem;
+    grid-area: 1 / 1 / 1 / 11;
+    z-index: 3;
+  }
+  .featured {
+    width: 100%;
+    &__elements {
+      &-items {
+        margin: 1rem;
+        border-radius: 5px;
+        height: 35vh;
+        width: 90vw;
+      }
+      &-title {
+        @include variables.emphasised-font;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      &-image-filter {
+        grid-area: 1 / 1 / 1 / 11;
+        background-color: variables.$accent-color-opacity;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+      &-image {
+        grid-area: 1 / 1 / 1 / 11;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+        .image {
           width: 100%;
           height: 100%;
-          z-index: 2;
+          transform: scale(1.4);
         }
-        &-image {
-          grid-area: 1 / 1 / 1 / 11;
-          width: 100%;
-          height: 100%;
-          overflow: hidden;
-          z-index: 1;
-          .image {
-            width: 100%;
-            height: 100%;
-            transform: scale(1.4);
-          }
-        }
-        &-desc {
-          @include variables.text-font;
-          margin-top: 1rem;
-        }
-        &-tools {
-          @include variables.text-font;
-          display: flex;
-          margin-top: 1rem;
-          justify-content: flex-start;
-          &-item {
-            margin-right: 1.2rem;
-            a {
-              @include variables.text-font;
-            }
-          }
-        }
-        &-links {
-          display: flex;
-          margin-top: 1rem;
-          justify-content: flex-start;
-          .link {
+      }
+      &-desc {
+        @include variables.text-font;
+        margin-top: 1rem;
+      }
+      &-tools {
+        @include variables.text-font;
+        display: flex;
+        margin-top: 1rem;
+        justify-content: flex-start;
+        &-item {
+          margin-right: 1.2rem;
+          a {
             @include variables.text-font;
-            margin-right: 1.2rem;
-            font-size: 1.3rem;
           }
         }
       }
+      &-links {
+        display: flex;
+        margin-top: 1rem;
+        justify-content: flex-start;
+        .link {
+          @include variables.text-font;
+          margin-right: 1.2rem;
+          font-size: 1.3rem;
+        }
+      }
     }
+  }
 }
 
 @mixin project-left {
@@ -99,7 +99,6 @@
       display: flex;
       justify-content: flex-end;
     }
-    
   }
 }
 
@@ -129,9 +128,8 @@
       &-title {
         @include variables.emphasised-font;
       }
-      &-image-filter {
-      
-      }
+      // &-image-filter {
+      // }
       &-image {
         grid-area: 1 / 5 / 1 / 10;
         z-index: 1;
@@ -193,7 +191,7 @@
     @include project-right;
   }
   .featured {
-    max-width: 1200px;
+    max-width: 1100px;
   }
   .other {
     max-width: 1200px;
@@ -211,6 +209,7 @@
       grid-template-columns: repeat(9, 10%);
       grid-template-rows: 1fr;
       overflow: hidden;
+      margin-bottom: 6rem;
     }
   }
 }
@@ -233,8 +232,7 @@
     flex-direction: column;
     position: relative;
     bottom: 0;
-    cursor: pointer;
-    margin: 1rem;
+    margin: 0.4rem;
     padding: 0.5rem;
     border-radius: 10px;
     background-color: variables.$accent-color;
@@ -321,10 +319,19 @@
 
 .archive-title {
   @include title();
+  margin: 1rem;
+  margin-bottom: 2rem;
+  h1 {
+    @include variables.text-font;
+    color: variables.$primary-bright;
+  }
 }
 
-.page {
-  // margin-top: 6vh;
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   cursor: default;
   width: 100%;
 }
@@ -346,27 +353,27 @@
   background-color: green;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
+// .tooltip {
+//   position: relative;
+//   display: inline-block;
+//   border-bottom: 1px dotted black;
+// }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 10rem;
-  bottom: 1.5rem;
-  left: 50%;
-  margin-left: -5rem; // Half the width to center tooltip
-  background-color: variables.$accent-color;
-  color: variables.$text-color-default;
-  text-align: center;
-  padding: 5px;
-  border-radius: 5px;
-  position: absolute;
-  z-index: 1;
-}
+// .tooltip .tooltiptext {
+//   visibility: hidden;
+//   width: 10rem;
+//   bottom: 1.5rem;
+//   left: 50%;
+//   margin-left: -5rem; // Half the width to center tooltip
+//   background-color: variables.$accent-color;
+//   color: variables.$text-color-default;
+//   text-align: center;
+//   padding: 5px;
+//   border-radius: 5px;
+//   position: absolute;
+//   z-index: 1;
+// }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
+// .tooltip:hover .tooltiptext {
+//   visibility: visible;
+// }

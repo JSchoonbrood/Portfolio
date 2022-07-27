@@ -1,5 +1,6 @@
-import React from 'react'
+import React from "react";
 import projects from "./ProjectData";
+import FadeIn from "../../FadeIn";
 
 const FeaturedProjects = () => {
   return (
@@ -14,13 +15,14 @@ const FeaturedProjects = () => {
               index
             ) => {
               return (
-                <li
-                  className={
-                    "featured__elements-items" +
-                    (index % 2 ? " project-left" : " project-right")
-                  }
-                >
-                  <div className="flex-column">
+                <FadeIn>
+                  <li
+                    className={
+                      "featured__elements-items" +
+                      (index % 2 ? " project-left" : " project-right")
+                    }
+                  >
+                    <div className="flex-column">
                       <h1 className="featured__elements-title">{title}</h1>
                       <p className="featured__elements-desc">{description}</p>
                       <ul className="featured__elements-tools">
@@ -36,16 +38,17 @@ const FeaturedProjects = () => {
                         {code}
                         {live}
                       </div>
-                  </div>
-                  <span className="featured__elements-image-filter"></span>
-                  <div className="featured__elements-image">{image}</div>
-                </li>
+                    </div>
+                    <span className="featured__elements-image-filter"></span>
+                    <div className="featured__elements-image">{image}</div>
+                  </li>
+                </FadeIn>
               );
             }
           )}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default FeaturedProjects
+export default FeaturedProjects;

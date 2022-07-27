@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
   .about__desc {
     display: flex;
     flex-direction: row;
@@ -20,19 +19,21 @@
     .about__sections {
       z-index: 998;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
 
       button {
         @include variables.text-font;
         margin: 0 0.5rem;
-        width: 10rem;
         padding: 0.7rem;
         margin-bottom: 0rem;
         background-color: transparent;
         border: 0px;
         color: variables.$text-color-default;
         border-bottom: 0.15rem solid;
+      }
+      .icons {
+        height: 25px;
       }
 
       button:hover {
@@ -48,8 +49,7 @@
 }
 
 .about__opt-info {
-  width: 80vw;
-  height: 60vh;
+  width: 100%;
   padding-left: 1rem;
   display: flex;
   flex-direction: column;
@@ -78,43 +78,53 @@
 
 .education {
   color: variables.$text-color-default;
-  
+  justify-content: center;
   &-block {
     // outline: 1px solid red;
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 25vh;
-    width: 40vw;
-    margin: 0.2rem;
+    max-width: 860px;
     padding: 1rem;
+    margin: 1rem;
     background-color: variables.$darker;
     border-radius: 5px;
     list-style: none;
+    box-shadow: 0px 3px variables.$darkest;
     &-imagecontainer {
+      width: 25%;
+      max-width: 25%;
       img {
-        width: 200px;
-        height: 200px;
+        padding-right: 1rem;
+        width: 100%;
       }
     }
     &-title {
       @include variables.text-font;
+      margin-bottom: 0.5rem;
     }
     &-years {
       @include variables.text-font;
     }
     &-qualification {
       @include variables.text-font;
+      margin-bottom: 0.5rem;
     }
     &-grade {
       @include variables.text-font;
+      margin-bottom: 0.5rem;
     }
     &-desc {
       @include variables.text-font;
+      margin-bottom: 0.5rem;
     }
     &-list {
       @include variables.text-font;
-      list-style: none;
+      margin-left: 1rem;
+      list-style: circle;
+      li {
+        margin-bottom: 0.5rem;
+      }
     }
   }
 }

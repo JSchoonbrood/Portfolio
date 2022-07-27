@@ -6,14 +6,38 @@ const TableData = [
     id: "0",
     name: "Programming Projects",
     subRows: [
-      { name: "Portfolio", linkType: "external", link: "https://www.jschoonbrood.dev/"},
-      { name: "Pollution Prediction", linkType: "external", link: "https://github.com/JSchoonbrood/Predicting-Pollution"},
-      { name: "Engine Logger", linkType: "external", link: "https://github.com/JSchoonbrood/Engine-Logger"},
-      { name: "Bike Rental Prediction", linkType: "external", link: "https://github.com/JSchoonbrood/Bike-Rental-Prediction"},
-      { name: "Folder Security", linkType: "external", link: ""},
-      { name: "Store Management", linkType: "external", link: ""},
-      { name: "Transport Data", linkType: "external", link: "https://github.com/JSchoonbrood/Transport-Data"},
-      { name: "Game Machine", linkType: "external", link: "https://github.com/JSchoonbrood/Game-Machine"},
+      {
+        name: "Portfolio",
+        linkType: "external",
+        link: "https://www.jschoonbrood.dev/",
+      },
+      {
+        name: "Pollution Prediction",
+        linkType: "external",
+        link: "https://github.com/JSchoonbrood/Predicting-Pollution",
+      },
+      {
+        name: "Engine Logger",
+        linkType: "external",
+        link: "https://github.com/JSchoonbrood/Engine-Logger",
+      },
+      {
+        name: "Bike Rental Prediction",
+        linkType: "external",
+        link: "https://github.com/JSchoonbrood/Bike-Rental-Prediction",
+      },
+      { name: "Folder Security", linkType: "external", link: "" },
+      { name: "Store Management", linkType: "external", link: "" },
+      {
+        name: "Transport Data",
+        linkType: "external",
+        link: "https://github.com/JSchoonbrood/Transport-Data",
+      },
+      {
+        name: "Game Machine",
+        linkType: "external",
+        link: "https://github.com/JSchoonbrood/Game-Machine",
+      },
     ],
   },
   {
@@ -57,7 +81,11 @@ export const COLUMNS = [
           </NavLink>
         );
       } else {
-        return <a href={data.link} className="table__body-link">{data.name}</a>;
+        return (
+          <a href={data.link} className="table__body-link">
+            {data.name}
+          </a>
+        );
       }
     },
   },

@@ -6,9 +6,10 @@ import {
 } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineMonitor } from "react-icons/md";
-import { NavLink } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../data/hooks";
 import { setFocus } from "../../data/slices/focusSlice";
+import { HashLink } from "react-router-hash-link";
+import scrollOffset from "../scrollOffset";
 import "./navbar.scss";
 
 const Navbar = () => {
@@ -24,7 +25,8 @@ const Navbar = () => {
   });
 
   const navbarControl = () => {
-    if (window.innerWidth < 767.98) { // Only activate for mobile / small devices view
+    if (window.innerWidth < 767.98) {
+      // Only activate for mobile / small devices view
       if (focusState === true) {
         dispatch(setFocus(false));
       } else {
@@ -54,38 +56,49 @@ const Navbar = () => {
               : "navbar__links_container"
           }
         >
-          <NavLink
+          <HashLink
             to="/"
-            className={({ isActive }) => (isActive ? "active link" : "link")}
+            smooth
+            className="link"
             onClick={navbarControl}
+            scroll={(elem) => scrollOffset(elem)}
           >
             <AiOutlineHome className="icon" />
             Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? "active link" : "link")}
+          </HashLink>
+          <HashLink
+            to="/"
+            elementId="projects"
+            smooth
+            className="link"
             onClick={navbarControl}
-          >
-            <AiOutlineUser className="icon" />
-            About
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) => (isActive ? "active link" : "link")}
-            onClick={navbarControl}
+            scroll={(elem) => scrollOffset(elem)}
           >
             <MdOutlineMonitor className="icon" />
             Projects
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) => (isActive ? "active link" : "link")}
+          </HashLink>
+          <HashLink
+            to="/"
+            elementId="about"
+            smooth
+            className="link"
             onClick={navbarControl}
+            scroll={(elem) => scrollOffset(elem)}
+          >
+            <AiOutlineUser className="icon" />
+            About
+          </HashLink>
+          <HashLink
+            to="/"
+            elementId="contacts"
+            smooth
+            className="link"
+            onClick={navbarControl}
+            scroll={(elem) => scrollOffset(elem)}
           >
             <AiOutlineContacts className="icon" />
             Contact
-          </NavLink>
+          </HashLink>
           <button className="resume-button">Resume</button>
         </nav>
       </div>

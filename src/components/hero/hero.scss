@@ -11,14 +11,17 @@
   margin-top: 1rem;
   width: 8rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .hero {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   margin-left: 10vw;
   margin-right: 10vw;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   &__content {
     display: flex;
     flex-direction: column;
@@ -37,7 +40,6 @@
     &-bio {
       @include variables.text-font;
       text-align: center;
-      
     }
     &-buttons {
       display: flex;
@@ -62,11 +64,23 @@
   }
 }
 
+.background-skew {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // height: 100px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  // overflow: hidden;
+}
+
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px), (max-width: 767.98px) {
   .hero {
     display: flex;
-    height: 100%;
+    height: 100vh;
     &__content {
       align-items: center;
       justify-content: center;
@@ -78,7 +92,7 @@
       }
       &-bio {
         text-align: center;
-        margin: 0
+        margin: 0;
         // margin-top: 2.4rem;
       }
       &-buttons {

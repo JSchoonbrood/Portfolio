@@ -1,10 +1,20 @@
-import React from 'react'
+import React from "react";
 import projects from "./ProjectData";
+import { NavLink } from "react-router-dom";
+import FadeIn from "../../FadeIn";
 
 const AdditionalProjects = () => {
   return (
     <div className="other">
+      <FadeIn>
         <h1 className="other-title">Additional Projects</h1>
+        <div>
+          <NavLink to="/archive" className="archive-title">
+            <h1>View The Archive</h1>
+          </NavLink>
+        </div>
+      </FadeIn>
+      <FadeIn>
         <ul className="other__elements">
           {projects
             .filter(({ featured }) => !featured)
@@ -17,7 +27,6 @@ const AdditionalProjects = () => {
                     {live}
                   </ul>
                   <p className="other__elements-desc">{description}</p>
-
                   <ul className="other__elements-tools">
                     {tools.map((elem) => {
                       return (
@@ -29,8 +38,9 @@ const AdditionalProjects = () => {
               );
             })}
         </ul>
-      </div>
-  )
-}
+      </FadeIn>
+    </div>
+  );
+};
 
-export default AdditionalProjects
+export default AdditionalProjects;

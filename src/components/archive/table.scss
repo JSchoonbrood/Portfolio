@@ -1,7 +1,6 @@
 @use "./../../variables";
 
 .archive {
-  height: 5vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,6 +15,7 @@
   overflow: hidden; /* Stops content overflowing and overlapping rounded corners */
   border-collapse: collapse;
   border-radius: 10px;
+  margin-bottom: 2rem;
   @media (max-width: 575.98px), (max-width: 767.98px) {
     width: 95vw;
   }
