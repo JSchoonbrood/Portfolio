@@ -1,5 +1,6 @@
 import React from 'react'
 import projects from "./ProjectData";
+import FadeIn from '../../FadeIn';
 
 const FeaturedProjects = () => {
   return (
@@ -14,6 +15,7 @@ const FeaturedProjects = () => {
               index
             ) => {
               return (
+                <FadeIn>
                 <li
                   className={
                     "featured__elements-items" +
@@ -40,6 +42,7 @@ const FeaturedProjects = () => {
                   <span className="featured__elements-image-filter"></span>
                   <div className="featured__elements-image">{image}</div>
                 </li>
+                </FadeIn>
               );
             }
           )}
