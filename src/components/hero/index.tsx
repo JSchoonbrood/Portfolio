@@ -2,7 +2,8 @@ import React from "react";
 import "./hero.scss";
 import { default as hero_img } from "../../images/hero_dev.svg";
 import Desc from "./type";
-import { Link as ScrollLink } from "react-scroll";
+import { HashLink } from 'react-router-hash-link';
+import scrollOffset from '../scrollOffset';
 
 const Hero = () => {
   return (
@@ -17,16 +18,15 @@ const Hero = () => {
           I'm an enthusiastic software engineer who enjoys solving problems.
         </p>
         <div className="hero__content-buttons">
-          <ScrollLink
-            activeClass="active"
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-60}
+          <HashLink
+            to="/"
+            elementId="projects"
+            smooth
             className="hero__content-buttons-project"
+            scroll={(elem) => scrollOffset(elem)}
           >
             Projects
-          </ScrollLink>
+          </HashLink>
           <a
             href="https://github.com/JSchoonbrood"
             className="hero__content-buttons-github"
