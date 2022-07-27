@@ -7,6 +7,12 @@ import "./App.scss";
 
 function App() {
   const focusState = useAppSelector((state) => state.focus.value);
+
+  // Scroll to top on refresh
+  window.onbeforeunload = () => { 
+    window.scrollTo(0, 0);
+  }
+
   return (
     <div className="App" id="app">
       <div className="layout gradient__bg">
