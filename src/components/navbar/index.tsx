@@ -9,7 +9,7 @@ import { MdOutlineMonitor } from "react-icons/md";
 import { useAppDispatch, useAppSelector } from "../../data/hooks";
 import { setFocus } from "../../data/slices/focusSlice";
 import { HashLink } from 'react-router-hash-link';
-import scrollOffset from './scrollOffset';
+import scrollOffset from '../scrollOffset';
 import "./navbar.scss";
 
 const Navbar = () => {
