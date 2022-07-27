@@ -8,8 +8,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineMonitor } from "react-icons/md";
 import { useAppDispatch, useAppSelector } from "../../data/hooks";
 import { setFocus } from "../../data/slices/focusSlice";
-import { HashLink } from 'react-router-hash-link';
-import scrollOffset from '../scrollOffset';
+import { HashLink } from "react-router-hash-link";
+import scrollOffset from "../scrollOffset";
 import "./navbar.scss";
 
 const Navbar = () => {
@@ -61,7 +61,7 @@ const Navbar = () => {
             smooth
             className="link"
             onClick={navbarControl}
-            scroll={elem => scrollOffset(elem)}
+            scroll={(elem) => scrollOffset(elem)}
           >
             <AiOutlineHome className="icon" />
             Home
@@ -72,7 +72,7 @@ const Navbar = () => {
             smooth
             className="link"
             onClick={navbarControl}
-            scroll={elem => scrollOffset(elem)}
+            scroll={(elem) => scrollOffset(elem)}
           >
             <MdOutlineMonitor className="icon" />
             Projects
@@ -83,7 +83,7 @@ const Navbar = () => {
             smooth
             className="link"
             onClick={navbarControl}
-            scroll={elem => scrollOffset(elem)}
+            scroll={(elem) => scrollOffset(elem)}
           >
             <AiOutlineUser className="icon" />
             About
@@ -94,7 +94,7 @@ const Navbar = () => {
             smooth
             className="link"
             onClick={navbarControl}
-            scroll={elem => scrollOffset(elem)}
+            scroll={(elem) => scrollOffset(elem)}
           >
             <AiOutlineContacts className="icon" />
             Contact

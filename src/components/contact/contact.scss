@@ -55,11 +55,11 @@
   &__message {
     @include input_container();
     @include variables.text-font;
-      @include input_container();
-      height: 17rem;
-      width: 100%;
-      resize: vertical;
-      text-align: start;
+    @include input_container();
+    height: 17rem;
+    width: 100%;
+    resize: vertical;
+    text-align: start;
   }
   &__submit-btn {
     @include variables.text-font;
@@ -120,7 +120,7 @@
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
 
 .tooltip {

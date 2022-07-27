@@ -1,8 +1,5 @@
 import pdf from "../../../resources/PollutionReport.pdf";
-import {
-  pollution_prediction,
-  engine_logger,
-} from "../../../images/index";
+import { pollution_prediction, engine_logger } from "../../../images/index";
 import { VscGithubAlt, VscFilePdf, VscLinkExternal } from "react-icons/vsc";
 
 const projects = [

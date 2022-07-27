@@ -2,8 +2,8 @@ import React from "react";
 import "./hero.scss";
 import { default as hero_img } from "../../images/hero_dev.svg";
 import Desc from "./type";
-import { HashLink } from 'react-router-hash-link';
-import scrollOffset from '../scrollOffset';
+import { HashLink } from "react-router-hash-link";
+import scrollOffset from "../scrollOffset";
 
 const Hero = () => {
   return (

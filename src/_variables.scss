@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono:wght@700&display=swap");
 
 @mixin hero-font {
   font-size: clamp(3rem, 4.8vw, 5.5rem);
@@ -70,13 +70,12 @@
   text-decoration: none;
   list-style: none;
   color: $text-color-default;
-  
 }
 
 // Misc
 $button-highlight: rgb(3, 36, 56, 0.3);
 $accent-color-nav: rgba(14, 44, 85, 0.685);
-$accent-color: #1F2123;
+$accent-color: #1f2123;
 $accent-color-dark: #1d2935;
 $accent-color-opacity: rgba(24, 28, 40, 0.85);
 $background-color: #0a192f;
@@ -89,9 +88,9 @@ $text-color-active: #00d0ff; // #00d0ff;  // #9273d1; //  #cd5ff8;
 
 // New Colour Pallete
 $darkest: #101010;
-$darker: #1F2123;
+$darker: #1f2123;
 $dark: #798c95;
 $primary-dark: #0273a4;
 $primary-bright: #00d0ff;
-$text-white: #fff
+$text-white: #fff;
 // $text-white-shaded:

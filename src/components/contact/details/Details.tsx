@@ -22,7 +22,9 @@ const Details = () => {
           <FaEnvelope className="cont-details__icon" />
           <h1 className="cont-details__title">Email</h1>
           <p
-            className={"cont-details__desc tooltip" + (copied ? " tooltip-visible" : "")}
+            className={
+              "cont-details__desc tooltip" + (copied ? " tooltip-visible" : "")
+            }
             onClick={handleEmail}
           >
             schoonbrood.jake@gmail.com

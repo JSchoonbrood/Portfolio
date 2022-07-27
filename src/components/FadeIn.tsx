@@ -18,15 +18,18 @@ const FadeIn = (props: any) => {
     if (domRef.current) {
       observer.observe(domRef.current);
       observerRefValue = observer.observe(domRef.current);
-
     }
 
     return () => {
       if (observerRefValue) observer.unobserve(observerRefValue);
-    }});
+    };
+  });
 
   return (
-    <div className={`fade-in ${isVisible ? 'fade-in-visible' : ''}`} ref={domRef}>
+    <div
+      className={`fade-in ${isVisible ? "fade-in-visible" : ""}`}
+      ref={domRef}
+    >
       {props.children}
     </div>
   );

@@ -14,7 +14,7 @@ const EducationData = [
       "Final Year Project (79%)",
       "Workshop Assistant for York AI Society",
     ],
-    image: <img src={uoy} alt="University of York Crest"></img>
+    image: <img src={uoy} alt="University of York Crest"></img>,
   },
   {
     name: "Queensbury Academy",
@@ -22,9 +22,8 @@ const EducationData = [
     grade: null,
     years: "2016-2018",
     desc: "ABB - Computer Science, Mathematics, Physics",
-    notableAchievements: [
-    ],
-    image: <img src={qa} alt="Queensbury Academy Crest"></img>
+    notableAchievements: [],
+    image: <img src={qa} alt="Queensbury Academy Crest"></img>,
   },
 ];
 

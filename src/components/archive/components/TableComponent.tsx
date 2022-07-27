@@ -22,7 +22,8 @@ const Table = () => {
   // @ts-expect-error
   const handleClick = (row) => {
     let state;
-    if (row.depth === 0) { // Stops collapsing row bug when clicking rows with depth
+    if (row.depth === 0) {
+      // Stops collapsing row bug when clicking rows with depth
       if (expanded[row.index]) {
         state = false;
       } else {
@@ -53,11 +54,15 @@ const Table = () => {
                 className={
                   "table__body-row" + (row.depth === 1 ? " expanded" : "")
                 }
-                
               >
                 {row.cells.map((cell) => {
                   return (
-                    <td {...cell.getCellProps()} onClick={() => handleClick(row)}>{cell.render("Cell")}</td>
+                    <td
+                      {...cell.getCellProps()}
+                      onClick={() => handleClick(row)}
+                    >
+                      {cell.render("Cell")}
+                    </td>
                   );
                 })}
               </tr>

@@ -1,77 +1,77 @@
 @use "./../../variables";
 
 @mixin featured-mobile {
-    .flex-column {
-      display: flex;
-      flex-direction: column;
-      margin-top: auto;
-      margin-bottom: auto;
-      padding: 1.5rem;
-      grid-area: 1 / 1 / 1 / 11;
-      z-index: 3;
-    }
-    .featured {
-      width: 100%;
-      &__elements {
-        &-items {
-          margin: 1rem;
-          border-radius: 5px;
-          height: 35vh;
-          width: 90vw;
-        }
-        &-title {
-          @include variables.emphasised-font;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-        }
-        &-image-filter {
-          grid-area: 1 / 1 / 1 / 11;
-          background-color: variables.$accent-color-opacity;
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 1.5rem;
+    grid-area: 1 / 1 / 1 / 11;
+    z-index: 3;
+  }
+  .featured {
+    width: 100%;
+    &__elements {
+      &-items {
+        margin: 1rem;
+        border-radius: 5px;
+        height: 35vh;
+        width: 90vw;
+      }
+      &-title {
+        @include variables.emphasised-font;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      &-image-filter {
+        grid-area: 1 / 1 / 1 / 11;
+        background-color: variables.$accent-color-opacity;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+      &-image {
+        grid-area: 1 / 1 / 1 / 11;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+        .image {
           width: 100%;
           height: 100%;
-          z-index: 2;
+          transform: scale(1.4);
         }
-        &-image {
-          grid-area: 1 / 1 / 1 / 11;
-          width: 100%;
-          height: 100%;
-          overflow: hidden;
-          z-index: 1;
-          .image {
-            width: 100%;
-            height: 100%;
-            transform: scale(1.4);
-          }
-        }
-        &-desc {
-          @include variables.text-font;
-          margin-top: 1rem;
-        }
-        &-tools {
-          @include variables.text-font;
-          display: flex;
-          margin-top: 1rem;
-          justify-content: flex-start;
-          &-item {
-            margin-right: 1.2rem;
-            a {
-              @include variables.text-font;
-            }
-          }
-        }
-        &-links {
-          display: flex;
-          margin-top: 1rem;
-          justify-content: flex-start;
-          .link {
+      }
+      &-desc {
+        @include variables.text-font;
+        margin-top: 1rem;
+      }
+      &-tools {
+        @include variables.text-font;
+        display: flex;
+        margin-top: 1rem;
+        justify-content: flex-start;
+        &-item {
+          margin-right: 1.2rem;
+          a {
             @include variables.text-font;
-            margin-right: 1.2rem;
-            font-size: 1.3rem;
           }
         }
       }
+      &-links {
+        display: flex;
+        margin-top: 1rem;
+        justify-content: flex-start;
+        .link {
+          @include variables.text-font;
+          margin-right: 1.2rem;
+          font-size: 1.3rem;
+        }
+      }
     }
+  }
 }
 
 @mixin project-left {
@@ -99,7 +99,6 @@
       display: flex;
       justify-content: flex-end;
     }
-    
   }
 }
 
