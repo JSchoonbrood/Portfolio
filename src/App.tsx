@@ -2,12 +2,11 @@ import React, { Fragment } from "react";
 import { Routes, Route } from "react-router-dom";
 import { About, Hero, Navbar, Projects, Sidebar, Contact, Archive} from "./components";
 import { useAppSelector } from "./data/hooks";
-
 import "./App.scss";
 
 function App() {
   const focusState = useAppSelector((state) => state.focus.value);
-
+  
   // Scroll to top on refresh
   window.onbeforeunload = () => { 
     window.scrollTo(0, 0);
