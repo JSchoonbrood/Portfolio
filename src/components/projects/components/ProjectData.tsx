@@ -1,6 +1,5 @@
 import pdf from "../../../resources/PollutionReport.pdf";
 import {
-  placeholder,
   pollution_prediction,
   engine_logger,
 } from "../../../images/index";

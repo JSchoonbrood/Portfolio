@@ -1,6 +1,5 @@
-import React, { FormEvent, useState } from "react";
+import React from "react";
 import { useForm, useWatch } from "react-hook-form";
-// import { default as plane } from "../../../images/paper-plane.png";
 
 const Form = () => {
 	const {
@@ -8,11 +7,11 @@ const Form = () => {
 		handleSubmit,
 		reset,
 		control,
-		formState: { errors, isSubmitSuccessful, isSubmitting },
+		formState: { isSubmitting },
 	} = useForm({ mode: "onTouched", });
 
-	const [isSuccess, setIsSuccess] = useState(false);
-	const [Message, setMessage] = useState("");
+	// const [isSuccess, setIsSuccess] = useState(false);
+	// const [Message, setMessage] = useState("");
 
 	const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
@@ -29,18 +28,18 @@ const Form = () => {
 			.then(async (response) => {
 				let json = await response.json();
 				if (json.success) {
-					setIsSuccess(true);
-					setMessage(json.message);
+					// setIsSuccess(true);
+					// setMessage(json.message);
 					e.target.reset();
 					reset();
 				} else {
-					setIsSuccess(false);
-					setMessage(json.message);
+					// setIsSuccess(false);
+					// setMessage(json.message);
 				}
 			})
 			.catch((error) => {
-				setIsSuccess(false);
-				setMessage("Client Error. Please check the console.log for more info");
+				// setIsSuccess(false);
+				// setMessage("Client Error. Please check the console.log for more info");
 				console.log(error);
 			});
 	};
@@ -100,9 +99,6 @@ const Form = () => {
 								className="cont-form__message"
 								{...register("message", { required: "Enter yopur Message" })} />
 						</div>
-						{/* <div className="plane"> */}
-							{/* <img src={plane} alt="plane" /> */}
-						{/* </div> */}
 						<button type="submit" className="cont-form__submit-btn">
 							{isSubmitting ? "Sending..." : "Send"}
 						</button>

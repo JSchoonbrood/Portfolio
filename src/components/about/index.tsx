@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Skills from "./skills/Skills";
 import Education from "./education/Education";
-import Hobbies from "./hobbies/Hobbies";
+// import Hobbies from "./hobbies/Hobbies";
 import "./about.scss";
 
 const About = () => {
@@ -33,10 +33,7 @@ const About = () => {
     <div className="about" id="about">
       <div className="about__desc">
         <div className="about__desc-img-container"></div>
-        <div className="about__desc-bio">
-          <h1></h1>
-          <p></p>
-        </div>
+        <div className="about__desc-bio"></div>
       </div>
 
       <div className="about__container">
