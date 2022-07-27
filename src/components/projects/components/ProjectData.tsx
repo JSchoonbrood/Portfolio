@@ -8,46 +8,6 @@ import { VscGithubAlt, VscFilePdf, VscLinkExternal } from "react-icons/vsc";
 
 const projects = [
   {
-    title: "ASD Tuning",
-    image: <img src={placeholder} className="image" alt="placeholder"></img>,
-    description:
-      "A web app for a US based business focused on extracting the most amount of performance from a vehicle through the sale of aftermarket parts and services such as engine management tuning.",
-    code: (
-      <a href="/" className="link" target="_blank" rel="noreferrer">
-        <VscGithubAlt />
-      </a>
-    ),
-    live: (
-      <a href="/" className="link" target="_blank" rel="noreferrer">
-        <VscLinkExternal />
-      </a>
-    ),
-    tools: [
-      <a
-        href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
-        target="_blank"
-        rel="noreferrer"
-      >
-        HTML5
-      </a>,
-      <a
-        href="https://www.typescriptlang.org/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        TypeScript
-      </a>,
-      <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-        React
-      </a>,
-      <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
-        SASS
-      </a>,
-    ],
-    featured: true,
-    status: false,
-  },
-  {
     title: "Engine Logger",
     image: <img src={engine_logger} className="image" alt="placeholder"></img>,
     description:
