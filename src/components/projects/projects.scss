@@ -129,9 +129,8 @@
       &-title {
         @include variables.emphasised-font;
       }
-      &-image-filter {
-      
-      }
+      // &-image-filter {
+      // }
       &-image {
         grid-area: 1 / 5 / 1 / 10;
         z-index: 1;
@@ -234,7 +233,6 @@
     flex-direction: column;
     position: relative;
     bottom: 0;
-    cursor: pointer;
     margin: 0.4rem;
     padding: 0.5rem;
     border-radius: 10px;
