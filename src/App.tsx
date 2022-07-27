@@ -21,6 +21,7 @@ function App() {
             className={"layout__container-components" + (focusState ? " blur" : "")}
           >
             <Routes>
+              <Route path="archive" element={<Archive />} />
               <Route path="/" element={
                 <Fragment>
                   <Hero />
@@ -29,7 +30,6 @@ function App() {
                   <Contact />
                 </Fragment>
               } />
-              <Route path="archive" element={<Archive />} />
             </Routes>
           </div>
         </div>
