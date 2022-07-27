@@ -1,5 +1,6 @@
 import React from "react";
 import EducationData from "./EducationData";
+import FadeIn from "../../FadeIn";
 
 const Education = () => {
   return (
@@ -7,6 +8,7 @@ const Education = () => {
       <ul>
         {EducationData.map(({ name, qualification, grade, years, desc, notableAchievements, image }) => {
           return (
+            <FadeIn>
             <li className="education-block">
               <div className="education-block-imagecontainer">
                 {image}
@@ -27,6 +29,7 @@ const Education = () => {
               </div>
               
             </li>
+            </FadeIn>
           )
         })}
       </ul>

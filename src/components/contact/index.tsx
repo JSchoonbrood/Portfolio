@@ -2,13 +2,16 @@ import React from "react";
 import Form from "./form/Form";
 import Details from "./details/Details";
 import "./contact.scss";
+import FadeIn from "../FadeIn";
 
 const Contact = () => {
-	return ( 
-    <div className="contacts" id="contacts">
-      <Form />
-      <Details />
-    </div>
+  return (
+    <FadeIn>
+      <div className="contacts" id="contacts">
+        <Form />
+        <Details />
+      </div>
+    </FadeIn>
   );
 };
 
