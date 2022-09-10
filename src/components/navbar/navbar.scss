@@ -53,8 +53,10 @@
 }
 
 // X-Small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px), (max-width: 767.98px) {
+@media only screen and (max-width: 575.98px), (max-width: 767.98px) {
   .navbar {
+    display: flex;
+    justify-content: center;
     padding-top: 0rem;
     padding-bottom: 0rem;
     margin-top: 0;

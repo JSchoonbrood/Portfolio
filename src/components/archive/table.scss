@@ -16,7 +16,7 @@
   border-collapse: collapse;
   border-radius: 10px;
   margin-bottom: 2rem;
-  @media (max-width: 575.98px), (max-width: 767.98px) {
+  @media only screen and (max-width: 575.98px), (max-width: 767.98px) {
     width: 95vw;
   }
   &__body {

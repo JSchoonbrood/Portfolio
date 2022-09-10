@@ -11,35 +11,45 @@
   padding: 0.5rem;
 }
 
+
+
+@mixin contacts-mobile {
+  flex-direction: column;
+  width: 100vw;
+}
+
+@mixin cont-form-mobile {
+  &__form {
+
+  }
+}
+
 .contacts {
+  @media only screen and (max-width: 767.98px) {
+    @include contacts-mobile;
+  }
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 65vh;
-  width: 100%;
-  .cont-form {
-    @include variables.text-master-font;
-    background-color: variables.$darker;
-    padding: 2rem;
-    border-radius: 10px;
-
-    max-width: 600px;
-    width: 100%;
-
-    max-height: 35rem;
-    height: 100%;
-    margin: 1rem;
-  }
-  .cont-details {
-    @include variables.text-master-font;
-    max-height: 35rem;
-    height: 100%;
-    margin: 1rem;
-  }
+  height: 100%;
+  max-width: 940px;
+  width: 100vw;
 }
 
 .cont-form {
+  @include cont-form-mobile;
+  @include variables.text-master-font;
+  background-color: variables.$darker;
+  padding: 2rem;
+  border-radius: 10px;
+
+  max-width: 600px;
+  // width: 100%; // Cause of the horizontal whitespace bug
+
+  max-height: 35rem;
+  height: 100%;
+  margin: 1rem;
   &__form {
     display: flex;
     flex-direction: column;
@@ -77,6 +87,10 @@
 }
 
 .cont-details {
+  @include variables.text-master-font;
+  max-height: 35rem;
+  height: 100%;
+  margin: 1rem;
   &__list {
     display: flex;
     flex-direction: column;
@@ -97,7 +111,7 @@
   }
   &__icon {
     color: variables.$primary-bright;
-    width: 3rem;
+    // width: 3rem;
     height: 3rem;
     margin: 1rem;
   }
@@ -131,7 +145,7 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 10rem;
+  // width: 10rem;
   bottom: 1.5rem;
   top: -5px;
   left: 100%;
