@@ -124,13 +124,11 @@
         justify-content: center;
         align-items: center;
         margin-top: 1.5rem;
-        margin-bottom: 6rem;
+        margin-bottom: 5rem;
       }
       &-title {
         @include variables.emphasised-font;
       }
-      // &-image-filter {
-      // }
       &-image {
         grid-area: 1 / 5 / 1 / 10;
         z-index: 1;
@@ -146,7 +144,6 @@
         padding: 1.2rem;
         margin-top: 1rem;
         border-radius: 5px;
-        // max-width: 95ch;
       }
       &-tools {
         @include variables.text-font;
@@ -195,7 +192,7 @@
     max-width: 1100px;
   }
   .other {
-    max-width: 1200px;
+    max-width: 1100px;
   }
 }
 
@@ -234,7 +231,6 @@
 }
 
 .other {
-  margin-top: 1rem;
   &__elements {
     display: grid;
     justify-content: center;
@@ -354,8 +350,6 @@
 
 .archive-title {
   @include title();
-  margin: 1rem;
-  margin-bottom: 2rem;
   h1 {
     @include variables.text-font;
     color: variables.$primary-bright;
