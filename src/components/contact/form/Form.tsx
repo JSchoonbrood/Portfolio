@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm, useWatch } from "react-hook-form";
+import FadeIn from "../../FadeIn";
 
 const Form = () => {
   const {
@@ -47,62 +48,64 @@ const Form = () => {
   return (
     <>
       <div className="cont-form">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <input
-            type="hidden"
-            value="7b62b99b-0275-4eeb-9e16-b311e7d827c2"
-            {...register("access_key")}
-          />
-          <input
-            type="hidden"
-            value={`${userName} sent a message`}
-            {...register("subject")}
-          />
-          <input type="hidden" {...register("from_name")} />
-          <input
-            type="checkbox"
-            id=""
-            className="hidden"
-            {...register("botcheck")}
-          ></input>
-          <div className="cont-form__form">
+        <FadeIn>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <input
-              type="text"
-              placeholder="Full Name"
-              autoComplete="false"
-              className="cont-form__name"
-              {...register("name", {
-                required: "Full name is required",
-                maxLength: 90,
-              })}
+              type="hidden"
+              value="7b62b99b-0275-4eeb-9e16-b311e7d827c2"
+              {...register("access_key")}
             />
+            <input
+              type="hidden"
+              value={`${userName} sent a message`}
+              {...register("subject")}
+            />
+            <input type="hidden" {...register("from_name")} />
+            <input
+              type="checkbox"
+              id=""
+              className="hidden"
+              {...register("botcheck")}
+            ></input>
+            <div className="cont-form__form">
+              <input
+                type="text"
+                placeholder="Full Name"
+                autoComplete="false"
+                className="cont-form__name"
+                {...register("name", {
+                  required: "Full name is required",
+                  maxLength: 90,
+                })}
+              />
 
-            <input
-              id="email"
-              type="email"
-              placeholder="Email Address"
-              // name="email"
-              autoComplete="false"
-              className="cont-form__email"
-              {...register("email", {
-                required: "Enter your email",
-                pattern: {
-                  value: /^\S+@\S+$/i,
-                  message: "Please enter a valid email",
-                },
-              })}
-            />
-            <textarea
-              // name="message"
-              placeholder="Your Message"
-              className="cont-form__message"
-              {...register("message", { required: "Enter yopur Message" })}
-            />
-          </div>
-          <button type="submit" className="cont-form__submit-btn">
-            {isSubmitting ? "Sending..." : "Send"}
-          </button>
-        </form>
+              <input
+                id="email"
+                type="email"
+                placeholder="Email Address"
+                // name="email"
+                autoComplete="false"
+                className="cont-form__email"
+                {...register("email", {
+                  required: "Enter your email",
+                  pattern: {
+                    value: /^\S+@\S+$/i,
+                    message: "Please enter a valid email",
+                  },
+                })}
+              />
+              <textarea
+                // name="message"
+                placeholder="Your Message"
+                className="cont-form__message"
+                {...register("message", { required: "Enter yopur Message" })}
+              />
+            </div>
+            <button type="submit" className="cont-form__submit-btn">
+              {isSubmitting ? "Sending..." : "Send"}
+            </button>
+          </form>
+        </FadeIn>
       </div>
     </>
   );
