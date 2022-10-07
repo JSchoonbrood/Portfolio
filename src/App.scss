@@ -70,14 +70,14 @@
 
 .fade-in {
   opacity: 0;
-  transform: translate(0, 50%); // Causes temporary whitespace on last element
+  // transform: translate(0, 50%); // Causes temporary whitespace on last element
   visibility: hidden;
   transition: opacity 500ms ease-out, transform 500ms ease-out;
   will-change: opacity, visibility;
 }
 .fade-in-visible {
   opacity: 1;
-  transform: none;
+  // transform: none;
   visibility: visible;
 }
 
