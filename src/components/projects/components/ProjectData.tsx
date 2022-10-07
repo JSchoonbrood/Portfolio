@@ -1,5 +1,5 @@
 import pdf from "../../../resources/PollutionReport.pdf";
-import { pollution_prediction, engine_logger, asdtuningusa } from "../../../images/index";
+import { pollution_prediction, engine_logger, asdtuningusa, jschoonbrood } from "../../../images/index";
 import { VscGithubAlt, VscFilePdf, VscLinkExternal } from "react-icons/vsc";
 
 const projects = [
@@ -35,6 +35,39 @@ const projects = [
       <a href="https://wordpress.com/" target="_blank" rel="noreferrer">
         Wordpress
       </a>,
+    ],
+    featured: true,
+    status: false,
+  },
+  {
+    title: "JSchoonbrood.Dev",
+    image: <img src={jschoonbrood} className="image" alt="placeholder"></img>,
+    description:
+      "The current site you're on.",
+    live: (
+      <a
+        href="https://www.jschoonbrood.dev"
+        className="link"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <VscLinkExternal />
+      </a>
+    ),
+    tools: [
+      <a
+        href="https://www.typescriptlang.org/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Typescript
+      </a>,
+      <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+        React
+      </a>,
+      <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
+      SASS
+    </a>,
     ],
     featured: true,
     status: false,
