@@ -72,7 +72,7 @@
   opacity: 0;
   // transform: translate(0, 50%); // Causes temporary whitespace on last element
   visibility: hidden;
-  transition: opacity 500ms ease-out, transform 500ms ease-out;
+  transition: opacity 800ms ease-out, transform 800ms ease-out;
   will-change: opacity, visibility;
 }
 .fade-in-visible {
