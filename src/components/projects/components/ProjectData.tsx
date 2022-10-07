@@ -1,8 +1,44 @@
 import pdf from "../../../resources/PollutionReport.pdf";
-import { pollution_prediction, engine_logger } from "../../../images/index";
+import { pollution_prediction, engine_logger, asdtuningusa } from "../../../images/index";
 import { VscGithubAlt, VscFilePdf, VscLinkExternal } from "react-icons/vsc";
 
 const projects = [
+  {
+    title: "ASDTuningUSA",
+    image: <img src={asdtuningusa} className="image" alt="placeholder"></img>,
+    description:
+      "A web app built in Typescript React and hosted on wordpress (headless cms).",
+    live: (
+      <a
+        href="https://www.asdtuningusa.com"
+        className="link"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <VscLinkExternal />
+      </a>
+    ),
+    tools: [
+      <a
+        href="https://www.typescriptlang.org/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Typescript
+      </a>,
+      <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+        React
+      </a>,
+      <a href="https://styled-components.com/" target="_blank" rel="noreferrer">
+        Styled-Components
+      </a>,
+      <a href="https://wordpress.com/" target="_blank" rel="noreferrer">
+        Wordpress
+      </a>,
+    ],
+    featured: true,
+    status: false,
+  },
   {
     title: "Engine Logger",
     image: <img src={engine_logger} className="image" alt="placeholder"></img>,
