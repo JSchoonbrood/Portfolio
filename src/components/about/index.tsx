@@ -1,5 +1,5 @@
 import React from "react";
-import Skills from "./skills/Skills";
+// import Skills from "./skills/Skills";
 import Education from "./education/Education";
 // import Hobbies from "./hobbies/Hobbies";
 import "./about.scss";
