@@ -124,12 +124,11 @@
         justify-content: center;
         align-items: center;
         margin-top: 1.5rem;
+        margin-bottom: 5rem;
       }
       &-title {
         @include variables.emphasised-font;
       }
-      // &-image-filter {
-      // }
       &-image {
         grid-area: 1 / 5 / 1 / 10;
         z-index: 1;
@@ -145,7 +144,6 @@
         padding: 1.2rem;
         margin-top: 1rem;
         border-radius: 5px;
-        max-width: 95ch;
       }
       &-tools {
         @include variables.text-font;
@@ -194,9 +192,27 @@
     max-width: 1100px;
   }
   .other {
+    max-width: 1100px;
+  }
+}
+
+@media only screen and (min-width: 767.99px) and (max-width: 1100.99px) {
+  @include featured-desktop;
+  .project-left {
+    @include project-left;
+  }
+
+  .project-right {
+    @include project-right;
+  }
+  .featured {
+    max-width: 750px;
+  }
+  .other {
     max-width: 1200px;
   }
 }
+
 .featured {
   &__elements {
     display: flex;
@@ -209,13 +225,12 @@
       grid-template-columns: repeat(9, 10%);
       grid-template-rows: 1fr;
       overflow: hidden;
-      margin-bottom: 6rem;
+      
     }
   }
 }
 
 .other {
-  margin-top: 1rem;
   &__elements {
     display: grid;
     justify-content: center;
@@ -233,6 +248,7 @@
     position: relative;
     bottom: 0;
     margin: 0.4rem;
+    margin-top: 1rem;
     padding: 0.5rem;
     border-radius: 10px;
     background-color: variables.$accent-color;
@@ -276,10 +292,20 @@
     color: variables.$text-color-default-shadow;
   }
 
-  @media (max-width: 575.98px), (max-width: 767.98px) {
+  @media only screen and (max-width: 1399.99px) {
+    &__elements {
+      grid-template-columns: repeat(2, 40%);
+    }
+  }
+
+  @media only screen and (max-width: 575.98px), (max-width: 767.98px) {
     &__elements {
       display: flex;
       flex-direction: column;
+      grid-template-columns: none;
+      width: 80%;
+      margin: auto;
+      margin-top: 1.5rem;
       &-desc {
         @include variables.text-font;
       }
@@ -293,13 +319,18 @@
       }
     }
   }
-
-  @media (max-width: 1399.99px) {
-    &__elements {
-      grid-template-columns: repeat(2, 45%);
-    }
-  }
 }
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  width: 100%;
+}
+
+
 
 @mixin title {
   @include variables.subtitle-font;
@@ -319,61 +350,8 @@
 
 .archive-title {
   @include title();
-  margin: 1rem;
-  margin-bottom: 2rem;
   h1 {
     @include variables.text-font;
     color: variables.$primary-bright;
   }
 }
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: default;
-  width: 100%;
-}
-
-@mixin dot {
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.dot-red {
-  @include dot;
-  background-color: red;
-}
-
-.dot-green {
-  @include dot;
-  background-color: green;
-}
-
-// .tooltip {
-//   position: relative;
-//   display: inline-block;
-//   border-bottom: 1px dotted black;
-// }
-
-// .tooltip .tooltiptext {
-//   visibility: hidden;
-//   width: 10rem;
-//   bottom: 1.5rem;
-//   left: 50%;
-//   margin-left: -5rem; // Half the width to center tooltip
-//   background-color: variables.$accent-color;
-//   color: variables.$text-color-default;
-//   text-align: center;
-//   padding: 5px;
-//   border-radius: 5px;
-//   position: absolute;
-//   z-index: 1;
-// }
-
-// .tooltip:hover .tooltiptext {
-//   visibility: visible;
-// }

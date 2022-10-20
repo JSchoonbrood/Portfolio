@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useTable, useExpanded } from "react-table";
 import TableData, { COLUMNS } from "./TableData";
 
@@ -19,8 +19,13 @@ const Table = () => {
     state: { expanded },
   } = tableInstance;
 
-  // @ts-expect-error
-  const handleClick = (row) => {
+
+  useEffect(() => {
+    tableInstance.toggleRowExpanded(["0"], true);
+  }, [tableInstance])
+  
+  const handleClick = (row: any) => {
+    console.log(typeof row);
     let state;
     if (row.depth === 0) {
       // Stops collapsing row bug when clicking rows with depth

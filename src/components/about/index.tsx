@@ -1,5 +1,5 @@
 import React from "react";
-import Skills from "./skills/Skills";
+// import Skills from "./skills/Skills";
 import Education from "./education/Education";
 // import Hobbies from "./hobbies/Hobbies";
 import "./about.scss";
@@ -31,29 +31,14 @@ const About = () => {
 
   return (
     <div className="about" id="about">
-      <div className="about__desc">
+      {/* <div className="about__desc">
         <div className="about__desc-img-container"></div>
         <div className="about__desc-bio"></div>
-      </div>
+      </div> */}
 
       <div className="about__container">
-        <div className="select-indicator"></div>
-        <div className="about__sections">
-          <Skills />
+          {/* <Skills /> */}
           <Education />
-          {/* {buttons.map((button) => {
-            return (
-              <button
-                onClick={() => handleClick(button.id)}
-                className={isActiveClass === button.id ? "active" : ""}
-              >
-                {button.content}
-              </button>
-            );
-          })} */}
-        </div>
-
-        {/* <div className="about__opt-info">{renderComponent()}</div> */}
       </div>
     </div>
   );

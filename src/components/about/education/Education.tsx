@@ -4,7 +4,10 @@ import FadeIn from "../../FadeIn";
 
 const Education = () => {
   return (
-    <div className="education">
+    <div className="about-education">  
+      <FadeIn>
+        <h1 className="about-title">Education</h1>
+      </FadeIn>
       <ul>
         {EducationData.map(
           ({
@@ -18,17 +21,17 @@ const Education = () => {
           }) => {
             return (
               <FadeIn>
-                <li className="education-block">
-                  <div className="education-block-imagecontainer">{image}</div>
-                  <div className="education-block-c">
-                    <h1 className="education-block-title">{name}</h1>
-                    <h1 className="education-block-qualification">
+                <li className="about-education__item">
+                  <div className="about-education__image-c">{image}</div>
+                  <div className="about-education__c">
+                    <h1 className="about-education-title">{name}</h1>
+                    <h1 className="about-education-qualification">
                       {qualification}
                     </h1>
                     {/* <h1 className="education-block-years">{years}</h1>  */}
-                    <h2 className="education-block-grade">{grade}</h2>
-                    <p className="education-block-desc">{desc}</p>
-                    <ul className="education-block-list">
+                    <h2 className="about-education-grade">{grade}</h2>
+                    <p className="about-education-desc">{desc}</p>
+                    <ul className="about-education-list">
                       {notableAchievements.map((value) => {
                         return <li>{value}</li>;
                       })}
